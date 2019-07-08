@@ -1,0 +1,35 @@
+//
+// Intro
+// --------------------------------------------------
+
+.c-intro {
+  position: relative;
+
+  @include mappy-bp($bp-grid-collapse) {
+    padding-bottom: rem($overlap-size);
+  }
+
+  .o-container {
+    transform: translateY(rem(-$overlap-size));
+  }
+}
+
+// Image
+.c-intro__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all $transition-time-long;
+
+  &.lazyload,
+  &.lazyloading {
+    opacity: 0;
+  }
+}
+
+// Text
+.c-intro__text {
+  @include mappy-bp($bp-grid-collapse) {
+    margin-top: rem(100px);
+  }
+}

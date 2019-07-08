@@ -1,0 +1,92 @@
+//
+// Features
+// --------------------------------------------------
+
+.c-features {
+  position: relative;
+  @include section-padding;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color-secondary;
+    opacity: .9;
+  }
+}
+
+// Image
+.c-features__img-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 0; // < content
+
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.c-features__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 55% 71%;
+  transition: all $transition-time-long;
+
+  &.lazyload,
+  &.lazyloading {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}
+
+// Content
+.c-features__content {
+  position: relative;
+  z-index: 10; // > image
+
+  color: $color-white;
+  @include font-smoothing;
+}
+
+.c-features__cols {
+  @include mappy-bp($bp-grid-collapse) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: rem(-$grid-gutter / 2);
+    margin-right: rem(-$grid-gutter / 2);
+  }
+}
+
+.c-features__col {
+  @include mappy-bp(max $bp-grid-collapse) {
+    & + & {
+      margin-top: rem($grid-gutter / 2);
+    }
+  }
+
+  @include mappy-bp($bp-grid-collapse) {
+    width: (100% / 3);
+    padding-left: rem($grid-gutter / 2);
+    padding-right: rem($grid-gutter / 2);
+  }
+}
+
+.c-features__col--features {
+  @include mappy-bp($bp-grid-collapse) {
+    width: (100% / 3 * 2);
+
+    ul {
+      column-count: 2;
+      column-gap: rem($grid-gutter);
+    }
+  }
+}
+

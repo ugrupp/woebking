@@ -1,0 +1,64 @@
+//
+// Overlay
+// --------------------------------------------------
+
+.c-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: index($z-index, overlay);
+  background-color: $overlay-bg;
+  color: $color-white;
+  @include font-smoothing;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity, visibility;
+  transition-duration: $transition-time-medium;
+
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-top: rem(100px);
+  padding-bottom: rem(100px);
+
+  @include mappy-bp(h 800px) {
+    padding-top: rem(300px);
+  }
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.c-overlay__closer-wrapper {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: rem(30px);
+
+  @include mappy-bp(md) {
+    top: rem(50px);
+  }
+}
+
+.c-overlay__closer {
+  margin-left: auto;
+
+  display: block;
+  width: rem(42px);
+  height: rem(42px);
+  transition: all $transition-time-default;
+
+  &:hover,
+  &:focus {
+    opacity: $hover-opacity;
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}

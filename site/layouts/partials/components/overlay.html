@@ -1,0 +1,30 @@
+<section class="c-overlay" id="{{ .Title | urlize }}" data-overlay>
+  <div class="c-overlay__closer-wrapper">
+    <div class="o-container">
+      <a href="javascript:void(0);" class="c-overlay__closer" data-overlay-close>
+        {{ partial "components/svg" (dict "svg" "close") }}
+        <span class="u-invisible">Schließen</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="o-container">
+    <div class="o-grid">
+      {{ with .Resources.GetMatch "col1*.md" }}
+        <div class="o-grid__col">
+          <div class="c-richtext c-richtext--inverted">
+            {{ .Content }}
+          </div>
+        </div>
+      {{end}}
+
+      {{ with .Resources.GetMatch "col2*.md" }}
+        <div class="o-grid__col">
+          <div class="c-richtext c-richtext--inverted">
+            {{ .Content }}
+          </div>
+        </div>
+      {{end}}
+    </div>
+  </div>
+</section>

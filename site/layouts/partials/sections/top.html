@@ -1,0 +1,16 @@
+<div class="c-topbar" data-topbar>
+  <div class="o-container">
+    <div class="c-topbar__inner">
+      {{/* Logo */}}
+      <a href='{{ "/" | relLangURL }}' class="c-topbar__logo">
+        <img src="/images/layout/logo.svg" alt="{{ .Site.Title -}}" />
+        <h1 class="u-invisible">{{ .Site.Title -}}</h1>
+      </a>
+
+      {{/* Menu */}}
+      <div class="c-topbar__menu">
+        {{ partial "sections/menu" . }}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+{{ define "main" }}
+  {{/* Get headless home bundle which holds the content */}}
+  {{ with .Site.GetPage "page" "home" }}
+    <div class="o-main__content" id="content">
+      Content
+    </div>
+  {{ end }}
+{{ end }}
+

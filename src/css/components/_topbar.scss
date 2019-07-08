@@ -1,0 +1,110 @@
+//
+// Topbar
+// --------------------------------------------------
+
+$topbar-height-top: 215px;
+$topbar-height-compact: $pagelayout-y-gutter;
+
+.c-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: index($z-index, topbar);
+  opacity: 0;
+
+  height: rem($topbar-height-top);
+
+  @include mappy-bp(sm) {
+    left: $pagelayout-gutter-sm;
+    right: $pagelayout-gutter-sm;
+  }
+
+  @include mappy-bp(md) {
+    left: $pagelayout-gutter-md;
+    right: $pagelayout-gutter-md;
+  }
+
+  @include mappy-bp(lg) {
+    left: $pagelayout-gutter-lg;
+    right: $pagelayout-gutter-lg;
+  }
+
+  .is-menu-open & {
+    @include mappy-bp(max $bp-menu-collapse) {
+      background-color: $overlay-bg;
+    }
+  }
+
+  > .o-container {
+    height: 100%;
+  }
+}
+
+// Headroom modifiers
+.c-topbar--headroom-initialized {
+  opacity: 1;
+  transition-property: transform, opacity, background-color;
+  transition-duration: $transition-time-medium;
+}
+
+.c-topbar--unpinned {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+
+.c-topbar--compact {
+  height: rem($topbar-height-compact);
+  background-color: $overlay-bg;
+}
+
+
+.c-topbar__inner {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+
+  .c-topbar--compact & {
+    align-items: center;
+  }
+}
+
+// Menu wrapper
+.c-topbar__menu {
+  margin-left: auto;
+}
+
+// Logo
+$logo-height: 200px;
+$logo-width: 224px;
+
+.c-topbar__logo {
+  height: 100%;
+  overflow: hidden;
+  margin-right: rem(20px);
+  display: flex;
+  flex-shrink: 0;
+
+  img {
+    margin-top: auto;
+    display: block;
+    height: rem($logo-height * $logo-xs-shrink-factor);
+    width: rem($logo-width * $logo-xs-shrink-factor);
+    transition: all $transition-time-default;
+    transform-origin: top left;
+
+    @include mappy-bp(360px) {
+      height: rem($logo-height);
+      width: rem($logo-width);
+    }
+
+    .c-topbar--compact & {
+      transform: translateX(rem(-34px)) scale(.675 / $logo-xs-shrink-factor);
+
+      @include mappy-bp(360px) {
+        transform: translateX(rem(-34px)) scale(.675);
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow"/>
+{{ .Hugo.Generator }}
+
+{{/* Title */}}
+{{ define "site_title" }}{{- with .Title }}{{ . }} | {{ end }}{{ .Site.Title -}}{{ end }}
+<title>{{ block "site_title" . }}{{ end }}</title>
+<meta itemprop="name" content='{{ block "site_title" . }}{{ end }}' />
+<meta property="og:title" content='{{ block "site_title" . }}{{ end }}' />
+
+{{/* Description */}}
+{{ with .Description }}
+<meta name="description" content="{{ . }}">
+<meta itemprop="description" content="{{ . }}" />
+<meta name="og:description" content="{{ . }}">
+{{ end }}
+
+<meta name="keywords" content="">
+
+{{/* Remaining og tags */}}
+<meta property="og:locale" content="{{ $.Site.Params.locale }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.woebking.com/" />
+<meta property="og:site_name" content="{{ .Site.Title -}}" />
+<meta property="og:latitude" content="52.287790" />
+<meta property="og:longitude" content="8.034540" />
+<meta property="og:street_address" content="Rheinstraße 36" />
+<meta property="og:region" content="Niedersachsen" />
+<meta property="og:locality" content="Osnabrück/Hafen" />
+<meta property="og:postal_code" content="49090" />
+<meta property="og:country_name" content="Deutschland/Germany" />
+<meta property="og:phone_number" content="+4954162867" />
+
+{{/* Favicon */}}
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=PYenrRK6mv">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=PYenrRK6mv">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=PYenrRK6mv">
+<link rel="manifest" href="/site.webmanifest?v=PYenrRK6mv">
+<link rel="mask-icon" href="/safari-pinned-tab.svg?v=PYenrRK6mv" color="#b93041">
+<link rel="shortcut icon" href="/favicon.ico?v=PYenrRK6mv">
+<meta name="msapplication-TileColor" content="#b93041">
+<meta name="theme-color" content="#ffffff">

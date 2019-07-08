@@ -1,0 +1,7 @@
+{{/* Imprint */}}
+{{ $imprint := .Site.GetPage "page" "imprint" }}
+{{ partial "components/overlay" $imprint }}
+
+{{/* Privacy */}}
+{{ $privacy := .Site.GetPage "page" "privacy" }}
+{{ partial "components/overlay" $privacy }}

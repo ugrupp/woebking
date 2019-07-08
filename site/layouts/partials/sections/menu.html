@@ -1,0 +1,22 @@
+<div class='c-menu' id="menu" data-menu>
+  {{/* Menu toggler */}}
+  <a href="#main" class="c-menu__toggler" data-menu-toggler>
+    {{ partial "components/svg" (dict "svg" "menu") }}
+    {{ partial "components/svg" (dict "svg" "close") }}
+    <span class="u-invisible">Menü öffnen/schließen</span>
+  </a>
+
+  <nav class="c-menu__inner c-menu__container o-container">
+    {{/* Main menu */}}
+    <ul class="c-menu__main">
+      {{ $currentPage := . }}
+      {{ range (slice "autohaus" "leistungen" "fahrzeuge" "kontakt") }}
+        <li>
+          <a href="/#{{ . }}" data-menu-link>
+            {{ humanize . }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+</div>

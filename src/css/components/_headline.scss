@@ -1,0 +1,48 @@
+//
+// Typography components
+// --------------------------------------------------
+
+// Headlines
+.c-headline {
+  &:not(.c-headline--text-sizing) {
+    @include font-ci;
+  }
+
+  font-weight: $font-weight-regular;
+  @include typi('headline--default');
+  display: block;
+
+  span.br {
+    display: block;
+  }
+
+  span.br-md {
+    @include mappy-bp(md) {
+      display: block;
+    }
+  }
+}
+
+.c-headline--sm {
+  @include typi('headline--sm');
+}
+
+.c-headline--text-sizing {
+  @include typi('richtext');
+}
+
+.c-headline--with-spacing {
+  margin-bottom: rem(40px);
+
+  @include mappy-bp(md) {
+    margin-bottom: rem(70px);
+  }
+}
+
+.c-headline--ci {
+  color: $color-content-ci;
+}
+
+.c-headline--secondary {
+  color: $color-secondary;
+}

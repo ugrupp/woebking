@@ -1,0 +1,109 @@
+//
+// Vehicles
+// --------------------------------------------------
+
+.c-vehicles {
+  padding-top: rem($contact-signet-size / 2);
+  padding-bottom: rem($contact-signet-size / 2);
+}
+
+.c-vehicles__cols {
+  @include mappy-bp(sm) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.c-vehicles__title {
+  display: block;
+  position: relative;
+  z-index: 10; // > link
+
+  color: inherit;
+}
+
+.c-vehicles__link {
+  display: block;
+  position: relative;
+  height: rem(250px);
+  width: rem(250px);
+  margin-top: rem(-30px);
+
+  @include mappy-bp(sm) {
+    margin-top: 0;
+    margin-left: rem(-30px);
+  }
+
+  @include mappy-bp(md) {
+    margin-left: rem(-45px);
+    height: rem(430px);
+    width: rem(430px);
+  }
+
+  svg {
+    transform: translate3d(0, 0, 0);
+    animation: pulse 1.25s infinite cubic-bezier(.66, 0, 0, 1);
+  }
+}
+
+// Pulse animation
+@keyframes pulse {
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+// Background
+.c-vehicles__img-wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color-gray-f;
+    opacity: .7;
+    border-radius: 50%;
+  }
+}
+
+.c-vehicles__img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: all $transition-time-long;
+
+  &.lazyload,
+  &.lazyloading {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}
+
+// Logo
+.c-vehicles__logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    height: 30%;
+  }
+}
