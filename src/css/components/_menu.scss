@@ -5,8 +5,8 @@
 .c-menu__toggler {
   display: block;
   position: relative;
-  width: rem(44px);
-  height: rem(44px);
+  width: rem(40px);
+  height: rem(40px);
 
   @include mappy-bp($bp-menu-collapse) {
     display: none;
@@ -85,19 +85,6 @@
     display: flex;
   }
 
-  svg {
-    display: none;
-    height: rem(11px);
-    width: rem(11px);
-    margin-left: rem(30px);
-    margin-right: rem(30px);
-
-    @include mappy-bp(lg) {
-      margin-left: rem(40px);
-      margin-right: rem(40px);
-    }
-  }
-
   li {
     display: flex;
     align-items: center;
@@ -114,20 +101,31 @@
         display: block;
       }
     }
+
+    @include mappy-bp(lg) {
+      margin-left: rem(60px);
+    }
   }
 
   a {
-    display: block;
+    display: flex;
+    align-items: baseline;
+
     @include typi('menu');
-    @include font-ci;
-    color: $color-white;
-    @include font-smoothing;
+    color: $color-secondary;
     transition: color $transition-time-default;
 
     &:hover,
     &:focus,
     &.active {
-      color: rgba($color-white, $hover-opacity);
+      color: $color-primary;
+    }
+
+    svg {
+      margin-left: rem(10px);
+      display: block;
+      height: rem(12px);
+      width: rem(12px);
     }
   }
 }

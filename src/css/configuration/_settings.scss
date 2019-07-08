@@ -23,12 +23,6 @@ $transition-time-long: .8s;
 $z-index: hero, footer, content, content-section, topbar, menu, overlay;
 
 // Sizes & other variables
-$pagelayout-gutter-sm: 30px;
-$pagelayout-gutter-md: 50px;
-$pagelayout-gutter-lg: 100px;
-
-$pagelayout-y-gutter: 100px;
-
 $container-gutter: 30px;
 $container-width-default: 1200px;
 $container-width-narrow: 800px;
@@ -39,6 +33,4 @@ $hover-opacity: .75;
 
 $overlap-size: 100px;
 
-$overlay-bg: rgba($color-content-ci, .9);
-
-$logo-xs-shrink-factor: .8;
+$overlay-bg: rgba(#fff, .9);

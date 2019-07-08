@@ -18,7 +18,7 @@ html {
 
 body {
   color: $color-content;
-  font-style: italic; // yes, the whole site is in italic
+  font-weight: $font-weight-light; // yes, the whole site is light
 
   // fallback font for initial render to avoid FOIT
   font-family: $font-family-base-fallback;

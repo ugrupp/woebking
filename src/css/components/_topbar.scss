@@ -2,8 +2,8 @@
 // Topbar
 // --------------------------------------------------
 
-$topbar-height-top: 215px;
-$topbar-height-compact: $pagelayout-y-gutter;
+$topbar-height-top: 120px;
+$topbar-height-compact: 80px;
 
 .c-topbar {
   position: fixed;
@@ -13,21 +13,10 @@ $topbar-height-compact: $pagelayout-y-gutter;
   z-index: index($z-index, topbar);
   opacity: 0;
 
-  height: rem($topbar-height-top);
+  height: rem($topbar-height-compact);
 
-  @include mappy-bp(sm) {
-    left: $pagelayout-gutter-sm;
-    right: $pagelayout-gutter-sm;
-  }
-
-  @include mappy-bp(md) {
-    left: $pagelayout-gutter-md;
-    right: $pagelayout-gutter-md;
-  }
-
-  @include mappy-bp(lg) {
-    left: $pagelayout-gutter-lg;
-    right: $pagelayout-gutter-lg;
+  @include mappy-bp($bp-menu-collapse) {
+    height: rem($topbar-height-top);
   }
 
   .is-menu-open & {
@@ -44,7 +33,7 @@ $topbar-height-compact: $pagelayout-y-gutter;
 // Headroom modifiers
 .c-topbar--headroom-initialized {
   opacity: 1;
-  transition-property: transform, opacity, background-color;
+  transition-property: all;
   transition-duration: $transition-time-medium;
 }
 
@@ -53,58 +42,55 @@ $topbar-height-compact: $pagelayout-y-gutter;
   opacity: 0;
 }
 
+.c-topbar--not-top.c-topbar--pinned {
+  background-color: #fff;
+}
 
 .c-topbar--compact {
   height: rem($topbar-height-compact);
-  background-color: $overlay-bg;
 }
 
 
 .c-topbar__inner {
   height: 100%;
   display: flex;
-  align-items: flex-end;
-
-  .c-topbar--compact & {
-    align-items: center;
-  }
+  align-items: center;
 }
 
 // Menu wrapper
 .c-topbar__menu {
   margin-left: auto;
+
+  @include mappy-bp($bp-menu-collapse) {
+    align-self: flex-end;
+    margin-bottom: rem(20px);
+  }
 }
 
 // Logo
-$logo-height: 200px;
-$logo-width: 224px;
+$logo-ratio: 160 / 90;
 
 .c-topbar__logo {
-  height: 100%;
-  overflow: hidden;
-  margin-right: rem(20px);
-  display: flex;
   flex-shrink: 0;
+  margin-right: rem(20px);
+
+  height: rem(60px);
+  width: rem(60px * $logo-ratio);
+  transition: all $transition-time-medium;
+
+  @include mappy-bp($bp-menu-collapse) {
+    height: rem(90px);
+    width: rem(90px * $logo-ratio);
+  }
+
+  .c-topbar--compact & {
+    height: rem(60px);
+    width: rem(60px * $logo-ratio);
+  }
 
   img {
-    margin-top: auto;
     display: block;
-    height: rem($logo-height * $logo-xs-shrink-factor);
-    width: rem($logo-width * $logo-xs-shrink-factor);
-    transition: all $transition-time-default;
-    transform-origin: top left;
-
-    @include mappy-bp(360px) {
-      height: rem($logo-height);
-      width: rem($logo-width);
-    }
-
-    .c-topbar--compact & {
-      transform: translateX(rem(-34px)) scale(.675 / $logo-xs-shrink-factor);
-
-      @include mappy-bp(360px) {
-        transform: translateX(rem(-34px)) scale(.675);
-      }
-    }
+    height: 100%;
+    width: 100%;
   }
 }

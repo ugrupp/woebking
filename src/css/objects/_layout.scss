@@ -4,28 +4,11 @@
 
 // Pagelayout (outer wrapper)
 .o-pagelayout {
-  padding-top: $pagelayout-y-gutter;
-
-  @include mappy-bp(sm) {
-    padding-bottom: $pagelayout-y-gutter;
-    padding-left: $pagelayout-gutter-sm;
-    padding-right: $pagelayout-gutter-sm;
-  }
-
-  @include mappy-bp(md) {
-    padding-left: $pagelayout-gutter-md;
-    padding-right: $pagelayout-gutter-md;
-  }
-
-  @include mappy-bp(lg) {
-    padding-left: $pagelayout-gutter-lg;
-    padding-right: $pagelayout-gutter-lg;
-  }
 }
 
 // Main (content wrapper)
 .o-main {
-  padding-top: calc(100vh - #{$pagelayout-y-gutter * 2});
+  padding-top: 100vh; // match fixed hero
 }
 
 .o-main__content {
@@ -55,7 +38,7 @@
     right: 0;
     bottom: 0;
     top: 0;
-    background-color: rgba($color-gray-f, .9);
+    background-color: rgba($color-gray-e, .9);
   }
 }
 

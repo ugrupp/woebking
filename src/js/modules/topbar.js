@@ -10,7 +10,7 @@ export default class Topbar {
         // Headroom
         let headroom = new Headroom(this.topbar, {
           // vertical offset in px before element is first unpinned
-          offset: 350 - 100, // XS hero height - pagelayout offset height
+          offset: 0,
           // scroll tolerance in px before state changes
           tolerance: 0,
           classes: {

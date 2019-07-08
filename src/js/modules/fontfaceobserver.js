@@ -19,25 +19,7 @@ function transformFontData(fontData) {
 }
 
 // CI font
-const fontsCi = transformFontData([
-  {
-    name: 'Overpass',
-    styles: [
-      {
-        weight: 400,
-        styles: [
-          'italic',
-        ],
-      },
-      {
-        weight: 700,
-        styles: [
-          'italic',
-        ],
-      },
-    ],
-  },
-]);
+const fontsCi = transformFontData([]);
 
 let fontsCiLoadedPromises = fontsCi.map((fontFaceObserverObj) => {
   // timeout: 7s
@@ -53,11 +35,26 @@ Promise.all(fontsCiLoadedPromises).then(() => {
 // Body font
 const fontsBody = transformFontData([
   {
-    name: 'BigNoodleTitling',
+    name: 'Roboto',
     styles: [
+      {
+        weight: 300,
+        styles: [
+          'normal',
+          'italic',
+        ],
+      },
       {
         weight: 400,
         styles: [
+          'normal',
+          'italic',
+        ],
+      },
+      {
+        weight: 700,
+        styles: [
+          'normal',
           'italic',
         ],
       },

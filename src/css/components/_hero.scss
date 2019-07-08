@@ -6,40 +6,9 @@
   position: fixed;
   left: 0;
   right: 0;
-  bottom: $pagelayout-y-gutter;
-  top: $pagelayout-y-gutter;
+  bottom: 0;
+  top: 0;
   z-index: index($z-index, hero);
-
-  @include mappy-bp(sm) {
-    left: $pagelayout-gutter-sm;
-    right: $pagelayout-gutter-sm;
-  }
-
-  @include mappy-bp(md) {
-    left: $pagelayout-gutter-md;
-    right: $pagelayout-gutter-md;
-  }
-
-  @include mappy-bp(lg) {
-    left: $pagelayout-gutter-lg;
-    right: $pagelayout-gutter-lg;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $color-content-ci;
-    opacity: .7;
-
-    @supports (mix-blend-mode: multiply) {
-      opacity: 1;
-      mix-blend-mode: multiply;
-    }
-  }
 }
 
 // Image
@@ -53,7 +22,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 18% 75%; // totally based on the car hero image
+  object-position: center center;
   transition: all $transition-time-long;
 
   &.lazyload,

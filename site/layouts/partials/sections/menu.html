@@ -9,14 +9,18 @@
   <nav class="c-menu__inner c-menu__container o-container">
     {{/* Main menu */}}
     <ul class="c-menu__main">
-      {{ $currentPage := . }}
-      {{ range (slice "autohaus" "leistungen" "fahrzeuge" "kontakt") }}
-        <li>
-          <a href="/#{{ . }}" data-menu-link>
-            {{ humanize . }}
-          </a>
-        </li>
-      {{ end }}
+      <li>
+        <a href="#">Unternehmen</a>
+      </li>
+      <li>
+        <a href="#">
+          Katalog
+          {{ partial "components/svg" (dict "svg" "external") }}
+        </a>
+      </li>
+      <li>
+        <a href="#">Downloads</a>
+      </li>
     </ul>
   </nav>
 </div>

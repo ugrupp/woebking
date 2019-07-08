@@ -4,11 +4,7 @@
 
 // Headlines
 .c-headline {
-  &:not(.c-headline--text-sizing) {
-    @include font-ci;
-  }
-
-  font-weight: $font-weight-regular;
+  font-weight: $font-weight-light;
   @include typi('headline--default');
   display: block;
 

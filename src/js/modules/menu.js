@@ -9,7 +9,6 @@ export default class Menu {
       if (this.el) {
         this.inited = true;
         this.togglers = [...document.querySelectorAll('[data-menu-toggler]')];
-        this.links = [...this.el.querySelectorAll('[data-menu-link]')];
       } else {
         console.error('Error: Menu could not be initialized.'); // eslint-disable-line no-console
         return this;
@@ -17,7 +16,6 @@ export default class Menu {
 
       this.initTogglers();
       this.initOutsideClick();
-      this.initCloseOnLinkClick();
     });
 
     return this;
@@ -52,15 +50,6 @@ export default class Menu {
       if (this.el !== e.target && !this.el.contains(e.target)) {
         this.close();
       }
-    });
-  }
-
-  // close overlay when link has been clicked
-  initCloseOnLinkClick() {
-    this.links.forEach((link) => {
-      link.addEventListener('click', () => {
-        this.close();
-      });
     });
   }
 
