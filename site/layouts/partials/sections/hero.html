@@ -1,4 +1,6 @@
-{{ $.Scratch.Set "imageContext" (.Resources.GetMatch "header.jpg") }}
+{{ with .Site.GetPage "page" "home" }}
+  {{ $.Scratch.Set "imageContext" (.Resources.GetMatch "header.jpg") }}
+{{ end }}
 
 <header class='c-hero' data-hero>
   <div class="c-hero__img-wrapper">

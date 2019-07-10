@@ -12,7 +12,7 @@
 }
 
 .o-main--half-hero {
-  padding-top: 55vh; // match fixed hero
+  padding-top: 55vh;
   margin-bottom: 45vh;
 }
 
@@ -45,6 +45,13 @@
     top: 0;
     background-color: $color-gray-e;
   }
+}
+
+// secondary bg color
+.o-main__section--bg-secondary {
+  background-color: rgba($color-secondary, .9);
+  color: $color-white;
+  @include font-smoothing;
 }
 
 // no pad

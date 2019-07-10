@@ -1,0 +1,77 @@
+//
+// Downloads
+// --------------------------------------------------
+
+// Highlights
+.c-downloads-highlights {
+  @include mappy-bp(xs) {
+    display: flex;
+  }
+}
+
+.c-downloads-highlights__highlight {
+  width: rem(200px);
+
+  @include mappy-bp(xs) {
+    width: rem(240px);
+  }
+
+  & + & {
+    margin-top: rem(40px);
+
+    @include mappy-bp(xs) {
+      margin-top: 0;
+      margin-left: rem(40px);
+    }
+
+    @include mappy-bp(sm) {
+      margin-left: rem(80px);
+    }
+  }
+}
+
+.c-downloads-highlights__highlight-link {
+  display: block;
+  color: inherit;
+  transition: color $transition-time-default;
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+}
+
+.c-downloads-highlights__highlight-img-wrapper {
+  overflow: hidden;
+}
+
+.c-downloads-highlights__highlight-img {
+  display: block;
+  width: 100%;
+  transition: all $transition-time-long;
+
+  &.lazyload,
+  &.lazyloading {
+    opacity: 0;
+  }
+}
+
+.c-downloads-highlights__highlight-title {
+  @include typi('richtext');
+  display: flex;
+  align-items: baseline;
+  margin-top: 1.125em;
+
+  svg {
+    flex-shrink: 0;
+    margin-right: 1em;
+    color: $color-primary;
+    width: rem(12px);
+    height: rem(12px);
+  }
+}
+
+// List
+.c-downloads-list {
+
+}

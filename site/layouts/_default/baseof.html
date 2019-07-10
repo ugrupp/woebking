@@ -20,7 +20,7 @@
       {{ partial "sections/hero" . }}
 
       {{/* Content */}}
-      <main class="o-main{{if eq .Params.layout "plain"}} o-main--half-hero{{end}}" id="main">
+      <main class="o-main{{if or (eq .Params.layout "plain") (eq .Params.layout "downloads")}} o-main--half-hero{{end}}" id="main">
         {{ block "main" . }}{{ end }}
       </main>
 
