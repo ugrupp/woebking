@@ -2,7 +2,7 @@ import SmoothScroll from 'smooth-scroll';
 
 document.addEventListener('DOMContentLoaded', (event) => {
   new SmoothScroll('[data-scroll-top]', {
-    speed: 750,
+    speed: 500,
     easing: 'easeOutQuad',
   });
 

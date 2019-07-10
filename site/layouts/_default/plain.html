@@ -1,0 +1,26 @@
+{{ define "main" }}
+  <div class="o-main__content" id="content">
+    <section class="o-main__section o-main__section--bg-light">
+      <div class="o-container">
+        <h1 class="c-headline c-headline--secondary c-headline--with-spacing">{{ .Title }}</h1>
+        <div class="o-grid">
+          {{ with .Resources.GetMatch "col1*.md" }}
+            <div class="o-grid__col">
+              <div class="c-richtext">
+                {{ .Content }}
+              </div>
+            </div>
+          {{end}}
+
+          {{ with .Resources.GetMatch "col2*.md" }}
+            <div class="o-grid__col">
+              <div class="c-richtext">
+                {{ .Content }}
+              </div>
+            </div>
+          {{end}}
+        </div>
+      </div>
+    </section>
+  </div>
+{{ end }}

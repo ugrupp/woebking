@@ -40,8 +40,23 @@
     }
   }
 
-  .c-headline--richtext + p {
-    margin-top: rem(-20px);
+  h1 {
+    @extend .c-headline;
+  }
+
+  h2 {
+    @extend .c-headline;
+    @extend .c-headline--secondary;
+    @extend .c-headline--text-sizing;
+  }
+
+  h3 {
+    @extend .c-headline;
+    @extend .c-headline--text-sizing;
+
+    + p:not(:first-child) {
+      margin-top: rem(-30px);
+    }
   }
 
   a {
@@ -112,7 +127,6 @@
       color: $color-secondary;
     }
   }
-
 }
 
 .c-richtext--inverted {

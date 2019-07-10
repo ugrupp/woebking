@@ -11,6 +11,11 @@
   padding-top: 100vh; // match fixed hero
 }
 
+.o-main--half-hero {
+  padding-top: 55vh; // match fixed hero
+  margin-bottom: 45vh;
+}
+
 .o-main__content {
   position: relative;
   z-index: index($z-index, content);

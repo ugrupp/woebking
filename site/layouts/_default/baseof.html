@@ -20,16 +20,13 @@
       {{ partial "sections/hero" . }}
 
       {{/* Content */}}
-      <main class="o-main" id="main">
+      <main class="o-main{{if eq .Params.layout "plain"}} o-main--half-hero{{end}}" id="main">
         {{ block "main" . }}{{ end }}
       </main>
 
       {{/* Footer */}}
       {{ partial "sections/footer.html" . }}
     </div>
-
-    {{/* Overlays (Imprint & Privacy) */}}
-    {{ partial "sections/overlays.html" . }}
 
     {{/* <body> includes */}}
     {{ partial "global/includes-body.html" . }}

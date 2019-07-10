@@ -6,7 +6,6 @@
 .c-headline {
   font-weight: $font-weight-light;
   @include typi('headline--default');
-  @include font-smoothing;
   display: block;
 
   span.br {

@@ -1,3 +1,4 @@
 ---
 title: Datenschutzerklärung
+layout: plain
 ---
