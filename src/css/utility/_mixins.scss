@@ -42,11 +42,11 @@
 
 // Apply default section padding
 @mixin section-padding {
-  padding-top: rem(100px);
-  padding-bottom: rem(100px);
+  padding-top: rem($section-padding);
+  padding-bottom: rem($section-padding);
 
   @include mappy-bp(md) {
-    padding-top: rem(200px);
-    padding-bottom: rem(200px);
+    padding-top: rem($section-padding-md);
+    padding-bottom: rem($section-padding-md);
   }
 }

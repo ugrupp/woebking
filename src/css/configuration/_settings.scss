@@ -12,7 +12,9 @@ $breakpoints: (
 );
 
 $bp-menu-collapse: md;
+
 $bp-grid-collapse: sm;
+$bp-grid-collapse-lg: lg;
 
 // Transition timing
 $transition-time-default: .2s;
@@ -27,7 +29,11 @@ $container-gutter: 30px;
 $container-width-default: 1200px;
 $container-width-narrow: 800px;
 
+$section-padding: 90px;
+$section-padding-md: 180px;
+
 $grid-gutter: 100px;
+$grid-gutter-md: 200px;
 
 $hover-opacity: .75;
 

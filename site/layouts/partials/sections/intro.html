@@ -1,0 +1,89 @@
+{{ with .Resources.GetMatch "intro*.md" }}
+  {{ $title := .Title }}
+  <section class="o-main__section o-main__section--no-pad o-main__section--bg-light" id="intro">
+    <div class="c-intro">
+      {{/* Canvas */}}
+      <div class="c-intro__canvas">
+        {{/* Image */}}
+        <div class="c-intro__canvas-img-wrapper">
+          {{ with $.Resources.GetMatch .Params.image }}
+            {{ $imageSmall := .Resize "500x" }}
+            {{ $imageMedium := .Resize "1000x" }}
+
+            {{/* Render the actual hero */}}
+            <img
+              alt="{{$title}}"
+              src="{{ $imageSmall.RelPermalink }}"
+              srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              data-srcset="{{ $imageSmall.RelPermalink }} 500w, {{ $imageMedium.RelPermalink }} 1000w"
+              data-sizes="auto"
+              class="c-intro__canvas-img lazyload" />
+          {{ end }}
+        </div>
+      </div>
+
+      {{/* Content */}}
+      <div class="c-intro__content">
+        <div class="o-container">
+          {{/* Arrow hint */}}
+          <div class="c-intro__arrow-hint">
+            {{ partial "components/svg" (dict "svg" "arrow-edge-down") }}
+          </div>
+
+          <div class="c-intro__cols o-grid">
+            {{/* Col 1 */}}
+            <div class="c-intro__col1 o-grid__col">
+              {{/* Headline */}}
+              <div class="c-intro__headline">
+                <h1 class="c-headline">{{ .Title }}</h1>
+              </div>
+
+              {{/* Contact */}}
+              <div class="c-intro__contacts">
+                <div class="c-intro__contacts-icon">
+                  {{ partial "components/svg" (dict "svg" "contact") }}
+                </div>
+
+                <ul class="c-intro__contacts-inner">
+                  {{ range .Params.contacts }}
+                    <li class="c-intro__contact">
+                      {{/* Image */}}
+                      {{ with $.Resources.GetMatch .image }}
+                        <div class="c-intro__contact-img-wrapper">
+                          {{ $imageSmall := .Resize "120x q100" }}
+
+                          {{/* Render the actual hero */}}
+                          <img
+                            alt="{{$title}}"
+                            src="{{ $imageSmall.RelPermalink }}"
+                            srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                            data-srcset="{{ $imageSmall.RelPermalink }} 100w"
+                            data-sizes="auto"
+                            class="c-intro__contact-img lazyload" />
+                        </div>
+                      {{ end }}
+
+                      {{/* Content */}}
+                      <div class="c-intro__contact-content">
+                        <div class="c-richtext c-richtext--inverted">
+                          {{ .content | markdownify }}
+                        </div>
+                      </div>
+                    </li>
+                  {{ end }}
+                </ul>
+              </div>
+            </div>
+
+            {{/* Col 2 */}}
+            <div class="c-intro__col2 o-grid__col">
+              <div class="c-richtext c-richtext--primary">
+                {{ .Content }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

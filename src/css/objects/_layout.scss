@@ -38,13 +38,8 @@
     right: 0;
     bottom: 0;
     top: 0;
-    background-color: rgba($color-gray-e, .9);
+    background-color: $color-gray-e;
   }
-}
-
-// ci bg color
-.o-main__section--bg-secondary {
-  background-color: $color-secondary;
 }
 
 // no pad

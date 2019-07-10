@@ -12,7 +12,7 @@
 .o-grid__col {
   @include mappy-bp(max $bp-grid-collapse) {
     &:not(:first-of-type) {
-      padding-top: rem(80px);
+      padding-top: rem($grid-gutter);
     }
   }
 
@@ -31,6 +31,18 @@
 
     &:nth-child(2n + 2) {
       padding-left: rem($grid-gutter / 2);
+    }
+  }
+
+  @include mappy-bp($bp-grid-collapse-lg) {
+    padding-top: rem($grid-gutter-md);
+
+    &:nth-child(2n + 1) {
+      padding-right: rem($grid-gutter-md / 2);
+    }
+
+    &:nth-child(2n + 2) {
+      padding-left: rem($grid-gutter-md / 2);
     }
   }
 }
