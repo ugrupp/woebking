@@ -83,26 +83,27 @@
 
 .c-richtext--inverted {
   &,
-  strong,
-  .c-headline,
-  em,
-  a:hover,
-  a:focus {
+  a {
     color: $color-white;
     @include font-smoothing;
   }
 
   a:hover,
   a:focus {
-    opacity: $hover-opacity;
+    color: $color-primary;
+  }
+
+  strong,
+  em {
+    color: $color-primary;
   }
 }
 
 .c-richtext--lg {
-  @include typi(lg);
+  @include typi(richtext-lg);
 }
 
 
 .c-richtext--sm {
-  @include typi(sm);
+  @include typi(richtext-sm);
 }

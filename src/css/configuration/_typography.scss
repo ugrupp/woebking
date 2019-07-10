@@ -21,23 +21,21 @@ $typi-breakpoint: mappy-bp;
 $typi: (
   // Base for <html>, will be inherited
   base: (
-    null: (16px, 1.5)
+    null: (16px, 1.4)
   ),
 
   richtext: (
-    null: (16px, 1.5),
-    sm: (18px),
+    null: (15px, 1.4),
+    sm: (17px),
+  ),
+
+  richtext-sm: (
+    null: (15px, 1.4),
+  ),
+
+  richtext-lg: (
+    null: (17px, 1.4),
     md: (20px),
-    lg: (22px)
-  ),
-
-  sm: (
-    null: (16px, 1.5),
-  ),
-
-  lg: (
-    null: (20px, 1.5),
-    md: (24px),
   ),
 
   headline--default: (
@@ -51,10 +49,6 @@ $typi: (
 
   button: (
     null: (18px, 1.2),
-  ),
-
-  footer: (
-    null: (20px, 1.2),
   ),
 );
 /* stylelint-enable */

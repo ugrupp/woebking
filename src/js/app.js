@@ -13,6 +13,7 @@ import 'babel-polyfill'; // eslint-disable-line import/no-unresolved
 // module imports
 import './modules/object-fit-images';
 import './modules/fontfaceobserver';
+import './modules/scroll-to';
 
 import Menu from './modules/menu';
 import Topbar from './modules/topbar';
