@@ -22,7 +22,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: 100% 0; // totally dependent on specific hero image
   transition: all $transition-time-long;
 
   &.lazyload,
@@ -30,4 +30,22 @@
     opacity: 0;
     transform: scale(1.05);
   }
+}
+
+.c-hero__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-top: calc(#{rem($topbar-height-compact)} + 8vh);
+  z-index: 10; // > image
+
+  @include mappy-bp(md) {
+    padding-top: calc(#{rem($topbar-height-top)} + 10vh);
+  }
+}
+
+.c-hero__content-inner {
+
 }

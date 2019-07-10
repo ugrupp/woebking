@@ -19,10 +19,6 @@
   }
 }
 
-.c-headline--sm {
-  @include typi('headline--sm');
-}
-
 .c-headline--text-sizing {
   @include typi('richtext');
 }
@@ -35,10 +31,18 @@
   }
 }
 
-.c-headline--ci {
-  color: $color-content-ci;
+.c-headline--primary {
+  color: $color-primary;
+
+  strong {
+    color: $color-secondary;
+  }
 }
 
 .c-headline--secondary {
   color: $color-secondary;
+
+  strong {
+    color: $color-primary;
+  }
 }

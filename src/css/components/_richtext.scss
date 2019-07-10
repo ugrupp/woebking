@@ -21,8 +21,7 @@
   }
 
   strong {
-    color: $color-content-ci;
-    font-weight: $font-weight-bold;
+    color: $color-secondary;
   }
 
   p {
@@ -46,17 +45,17 @@
   }
 
   a {
-    color: inherit;
+    color: $color-secondary;
     transition: all $transition-time-default;
 
     &:hover,
     &:focus {
-      color: $color-content-ci;
+      color: $color-primary;
     }
   }
 
   em {
-    color: $color-content-ci;
+    color: $color-secondary;
   }
 
   ul {
