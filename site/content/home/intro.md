@@ -6,17 +6,17 @@ contacts:
     Michael Kruse  
     +49 (0)151 / 14921406  
     [michael.kruse@woebking.com](mailto:michael.kruse@woebking.com)
-  image: michael-kruse.jpg
+  image: contacts/michael-kruse.jpg
 - content: |
     Henry Baldwin  
     +49 (0)151 / 17650951  
     [henry.baldwin@woebking.com](mailto:henry.baldwin@woebking.com)
-  image: henry-baldwin.jpg
+  image: contacts/henry-baldwin.jpg
 - content: |
     Ronny Kub  
     +49 (0)171 / 6927834  
     [ronny.kub@woebking.com](mailto:ronny.kub@woebking.com)
-  image: ronny-kub.jpg
+  image: contacts/ronny-kub.jpg
 ---
 
 Mit Meeresalgen, Qualität, Kompetenz und Tradition verwirklicht die Wöbking GmbH Ihre Wünsche von einem widerstandsfähigen, gesunden Rasen. Dabei ist unser Leitmotiv **„a concept that plays better“** nicht nur ein Werbeslogan, sondern ein langfristiges Versprechen an Sie, unsere Kunden. Dieses Versprechen lösen wir ein durch eine Beratung, die über unser Produktsortiment an Düngemitteln und Biostimulanzien hinausgeht.

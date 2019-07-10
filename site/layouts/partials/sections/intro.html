@@ -10,7 +10,6 @@
             {{ $imageSmall := .Resize "500x" }}
             {{ $imageMedium := .Resize "1000x" }}
 
-            {{/* Render the actual hero */}}
             <img
               alt="{{$title}}"
               src="{{ $imageSmall.RelPermalink }}"
