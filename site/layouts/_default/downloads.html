@@ -76,7 +76,7 @@
                               {{/* Label download */}}
                               {{ with .label }}
                                 {{ with $.Resources.GetMatch . }}
-                                  <a class="c-downloads-list__item-download" href="{{ .Permalink }}">
+                                  <a class="c-downloads-list__item-download" href="{{ .Permalink }}" title="Produketikett herunterladen">
                                     <div class="c-downloads-indicator">
                                       {{ partial "components/svg" (dict "svg" "download-1") }}
                                     </div>
@@ -89,7 +89,7 @@
                               {{/* Sheet download */}}
                               {{ with .sheet }}
                                 {{ with $.Resources.GetMatch . }}
-                                  <a class="c-downloads-list__item-download" href="{{ .Permalink }}">
+                                  <a class="c-downloads-list__item-download" href="{{ .Permalink }}" title="Sicherheitsdatenblatt herunterladen">
                                     <div class="c-downloads-indicator">
                                       {{ partial "components/svg" (dict "svg" "download-2") }}
                                     </div>
