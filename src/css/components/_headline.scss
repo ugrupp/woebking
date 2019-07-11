@@ -33,6 +33,7 @@
 
 .c-headline--primary {
   color: $color-primary;
+  @include font-smoothing;
 
   strong {
     color: $color-secondary;
@@ -41,6 +42,7 @@
 
 .c-headline--secondary {
   color: $color-secondary;
+  @include font-smoothing;
 
   strong {
     color: $color-primary;

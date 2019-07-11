@@ -55,10 +55,6 @@ $partners-canvas-height-xs: 250px;
   @include section-padding;
 }
 
-.c-partners__headline {
-  color: $color-secondary;
-}
-
 // Partners list
 .c-partners__partner {
   display: flex;
