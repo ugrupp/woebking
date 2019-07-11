@@ -1,6 +1,11 @@
 ---
 title: Downloads
 layout: downloads
+
+menu:
+  main:
+    weight: 300
+
 highlights:
   - name: WQ Aquence OC SC 823 (Terra-Control)
     thumbnail: highlights/aquence.png

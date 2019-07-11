@@ -10,4 +10,16 @@ disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
     locale = "de_DE"
     weight = 1
 
-[params]
+[menu]
+  [[menu.main]]
+    title = "Unternehmen"
+    identifier = "home"
+    weight = 100
+    url = "/"
+  [[menu.main]]
+    title = "Katalog"
+    identifier = "catalog"
+    weight = 200
+    url = "https://www.woebking.com/katalog/"
+    external = true
+

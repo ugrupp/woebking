@@ -9,18 +9,20 @@
   <nav class="c-menu__inner c-menu__container o-container">
     {{/* Main menu */}}
     <ul class="c-menu__main">
-      <li>
-        <a href="#">Unternehmen</a>
-      </li>
-      <li>
-        <a href="#">
-          Katalog
-          {{ partial "components/svg" (dict "svg" "external") }}
-        </a>
-      </li>
-      <li>
-        <a href="#">Downloads</a>
-      </li>
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+        <li>
+          <a class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}"
+              href="{{ .URL }}"{{ if eq .Identifier "catalog" }} target="_blank"{{ end }}>
+            {{ .Title }}
+
+            {{/* External icon */}}
+            {{ if eq .Identifier "catalog" }}
+              {{ partial "components/svg" (dict "svg" "external") }}
+            {{ end }}
+          </a>
+        </li>
+      {{ end }}
     </ul>
   </nav>
 </div>
