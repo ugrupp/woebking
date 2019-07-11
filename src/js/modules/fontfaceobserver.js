@@ -35,27 +35,12 @@ Promise.all(fontsCiLoadedPromises).then(() => {
 // Body font
 const fontsBody = transformFontData([
   {
-    name: 'Roboto',
+    name: 'HelveticaNeueLTPro-Lt',
     styles: [
       {
         weight: 300,
         styles: [
           'normal',
-          'italic',
-        ],
-      },
-      {
-        weight: 400,
-        styles: [
-          'normal',
-          'italic',
-        ],
-      },
-      {
-        weight: 700,
-        styles: [
-          'normal',
-          'italic',
         ],
       },
     ],
