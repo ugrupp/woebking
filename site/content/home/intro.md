@@ -3,17 +3,17 @@ title: Die Experten für Meeresalgen und die alternative Sportrasenpflege.
 image: intro.jpg
 contacts:
 - content: |
-    Michael Kruse  
+    **Michael Kruse**  
     +49 (0)151 / 14921406  
     [michael.kruse@woebking.com](mailto:michael.kruse@woebking.com)
   image: contacts/michael-kruse.jpg
 - content: |
-    Henry Baldwin  
+    **Henry Baldwin**  
     +49 (0)151 / 17650951  
     [henry.baldwin@woebking.com](mailto:henry.baldwin@woebking.com)
   image: contacts/henry-baldwin.jpg
 - content: |
-    Ronny Kub  
+    **Ronny Kub**  
     +49 (0)171 / 6927834  
     [ronny.kub@woebking.com](mailto:ronny.kub@woebking.com)
   image: contacts/ronny-kub.jpg
