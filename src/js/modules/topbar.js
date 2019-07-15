@@ -37,8 +37,8 @@ export default class Topbar {
         headroom.init();
 
         // update topbar mode (normal/compact)
-        window.addEventListener('scroll', this.updateTopbarMode.bind(this), false);
-        this.updateTopbarMode();
+        // window.addEventListener('scroll', this.updateTopbarMode.bind(this), false);
+        // this.updateTopbarMode();
       }
     });
   }
