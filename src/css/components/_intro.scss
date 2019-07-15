@@ -84,6 +84,7 @@ $canvas-height-md: 680px;
 
 // Arrow hint
 .c-intro__arrow-hint {
+  display: block;
   color: $color-white;
   height: rem(37px);
   width: rem(23px);
@@ -91,6 +92,11 @@ $canvas-height-md: 680px;
   position: absolute;
   left: rem($container-gutter);
   top: rem(-18.5px);
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+  }
 
   svg {
     height: 100%;

@@ -25,9 +25,10 @@
       <div class="c-intro__content">
         <div class="o-container">
           {{/* Arrow hint */}}
-          <div class="c-intro__arrow-hint">
+          <a class="c-intro__arrow-hint" href="#content" data-scroll-content data-scroll-content-hero>
             {{ partial "components/svg" (dict "svg" "arrow-edge-down") }}
-          </div>
+            <span class="u-invisible">Zum Content</span>
+          </a>
 
           <div class="c-intro__cols o-grid">
             {{/* Col 1 */}}
