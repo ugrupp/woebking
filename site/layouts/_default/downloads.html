@@ -9,7 +9,7 @@
             {{ $title := .name }}
 
             <li class="c-downloads-highlights__highlight">
-              <a class="c-downloads-highlights__highlight-link" href="{{ with $.Resources.GetMatch .src }}{{ .Permalink }}{{ end }}">
+              <a class="c-downloads-highlights__highlight-link" href="{{ with $.Resources.GetMatch .src }}{{ .Permalink }}{{ end }}" target="_blank">
                 {{/* Image */}}
                 {{ with $.Resources.GetMatch .thumbnail }}
                   <div class="c-downloads-highlights__highlight-img-wrapper">
@@ -76,7 +76,7 @@
                               {{/* Label download */}}
                               {{ with .label }}
                                 {{ with $.Resources.GetMatch . }}
-                                  <a class="c-downloads-list__item-download" href="{{ .Permalink }}" title="Produketikett herunterladen">
+                                  <a class="c-downloads-list__item-download" href="{{ .Permalink }}" title="Produketikett herunterladen" target="_blank">
                                     <div class="c-downloads-indicator">
                                       {{ partial "components/svg" (dict "svg" "download-1") }}
                                     </div>
@@ -89,7 +89,7 @@
                               {{/* Sheet download */}}
                               {{ with .sheet }}
                                 {{ with $.Resources.GetMatch . }}
-                                  <a class="c-downloads-list__item-download" href="{{ .Permalink }}" title="Sicherheitsdatenblatt herunterladen">
+                                  <a class="c-downloads-list__item-download" href="{{ .Permalink }}" title="Sicherheitsdatenblatt herunterladen" target="_blank">
                                     <div class="c-downloads-indicator">
                                       {{ partial "components/svg" (dict "svg" "download-2") }}
                                     </div>
