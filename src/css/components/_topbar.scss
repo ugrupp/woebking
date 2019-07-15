@@ -57,9 +57,10 @@
 // Menu wrapper
 .c-topbar__menu {
   margin-left: auto;
+  align-self: flex-end;
+  margin-bottom: rem(10px);
 
   @include mappy-bp($bp-menu-collapse) {
-    align-self: flex-end;
     margin-bottom: rem(20px);
   }
 }

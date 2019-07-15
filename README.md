@@ -4,8 +4,6 @@
 
 This website is based on [Hugo](https://gohugo.io/) as a static site generator and [Gulp](https://gulpjs.com/) + [Webpack](https://webpack.js.org/) as the asset pipeline tools. Originally it's a heavily modified fork of [victor-hugo](https://github.com/netlify/victor-hugo).
 
-This project is released under the [GPL-3.0](LICENSE). Please make sure you understand its implications and guarantees.
-
 ## Usage
 
 ### Prerequisites

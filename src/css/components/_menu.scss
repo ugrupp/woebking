@@ -5,8 +5,8 @@
 .c-menu__toggler {
   display: block;
   position: relative;
-  width: rem(40px);
-  height: rem(40px);
+  width: rem(36px);
+  height: rem(36px);
 
   @include mappy-bp($bp-menu-collapse) {
     display: none;
