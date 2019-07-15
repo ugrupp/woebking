@@ -20,6 +20,6 @@ disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
     title = "Katalog"
     identifier = "catalog"
     weight = 200
-    url = "https://www.woebking.com/katalog/"
+    url = "http://www.1kserver.com/preview/75ee8c875238aaad4df4a6529fadc82c5150736a/"
     external = true
 
