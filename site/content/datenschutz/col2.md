@@ -33,13 +33,13 @@ Eine uns erteilte Einwilligung zur Verarbeitung Ihrer personenbezogenen Daten k�
 
 Ihre vorstehend beschriebenen Rechte können Sie jederzeit formlos zu folgenden Kontaktdaten geltend machen:
 
-Wöbking GmbH, Rheinstraße. 36, 49090 Osnabrück, Telefon +49 (0)541/62867, Fax +49 (0)541 / 682460, E-Mail info@woebking.com, Geschäftsführer: Jannpeter Heinrich Fip, Michael Kruse
+Wöbking GmbH, Rheinstraße. 36, 49090 Osnabrück, Telefon +49 (0)541 / 62867, Fax +49 (0)541 / 682460, E-Mail info@woebking.com, Geschäftsführer: Jannpeter Heinrich Fip, Michael Kruse
 
 ## Verantwortliche Stelle 
 
-erantwortliche Stelle für die Verarbeitung Ihrer personenbezogenen Daten im Rahmen der Geschäftsbeziehung und der Nutzung unserer Webseite ist:
+Verantwortliche Stelle für die Verarbeitung Ihrer personenbezogenen Daten im Rahmen der Geschäftsbeziehung und der Nutzung unserer Webseite ist:
 
-Wöbking GmbH, Rheinstraße. 36, 49090 Osnabrück, Telefon +49 (0)541/62867, Fax +49 (0)541 / 682460, E-Mail info@woebking.com, Geschäftsführer: Jannpeter Heinrich Fip, Michael Kruse
+Wöbking GmbH, Rheinstraße. 36, 49090 Osnabrück, Telefon +49 (0)541 / 62867, Fax +49 (0)541 / 682460, E-Mail info@woebking.com, Geschäftsführer: Jannpeter Heinrich Fip, Michael Kruse
 
 ## Datenschutzbeauftragter
 

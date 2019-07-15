@@ -147,6 +147,12 @@
   }
 }
 
+.c-richtext--plain {
+  a {
+    color: inherit;
+  }
+}
+
 .c-richtext--lg {
   @include typi(richtext-lg);
 }

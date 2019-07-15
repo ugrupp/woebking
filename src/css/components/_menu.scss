@@ -112,6 +112,7 @@
     align-items: baseline;
 
     @include typi('menu');
+    @include font-smoothing;
     color: $color-secondary;
     transition: color $transition-time-default;
 

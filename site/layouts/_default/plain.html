@@ -6,7 +6,7 @@
         <div class="o-grid">
           {{ with .Resources.GetMatch "col1*.md" }}
             <div class="o-grid__col">
-              <div class="c-richtext">
+              <div class="c-richtext c-richtext--plain c-richtext--primary">
                 {{ .Content }}
               </div>
             </div>
@@ -14,7 +14,7 @@
 
           {{ with .Resources.GetMatch "col2*.md" }}
             <div class="o-grid__col">
-              <div class="c-richtext">
+              <div class="c-richtext c-richtext--plain c-richtext--primary">
                 {{ .Content }}
               </div>
             </div>
