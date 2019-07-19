@@ -9,13 +9,16 @@ menu:
 highlights:
   - name: WQ Aquence OC SC 823 (Terra-Control)
     thumbnail: highlights/aquence.png
-    src: sheets/Woebking_Infoblatt-Aquence-OC-SC-823.pdf
+    src: highlights/Woebking_Infoblatt-Aquence-OC-SC-823.pdf
   - name: WQ Biocrack
     thumbnail: highlights/biocrack.png
-    src: sheets/Woebking_Infoblatt-Aquence-OC-SC-823.pdf
+    src: highlights/Woebking_Infoblatt-Biocrack.pdf
   - name: Sea Nymph Percolate
     thumbnail: highlights/percolate.png
-    src: sheets/Woebking_Infoblatt-Aquence-OC-SC-823.pdf
+    src: highlights/Woebking_Produkbroschuere-Percolate.pdf
+  - name: Streuer&shy;einstellungen
+    thumbnail: highlights/streuereinstellungen.png
+    src: highlights/Woebking_Streuereinstellungen.pdf
   
 downloads:
   title: Produktetiketten, <span class="br">Sicherheitsdatenblätter</span>

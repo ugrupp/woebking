@@ -28,7 +28,7 @@
 
                 <div class="c-downloads-highlights__highlight-title">
                   {{ partial "components/svg" (dict "svg" "download-1") }}
-                  <strong>{{ .name }}</strong>
+                  <strong>{{ .name | safeHTML}}</strong>
                 </div>
               </a>
             </li>

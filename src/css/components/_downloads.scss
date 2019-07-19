@@ -6,7 +6,7 @@ $downloads-indicator-size: 32px;
 
 // Highlights
 .c-downloads-highlights {
-  @include mappy-bp(xs) {
+  @include mappy-bp(sm) {
     display: flex;
   }
 }
@@ -14,19 +14,15 @@ $downloads-indicator-size: 32px;
 .c-downloads-highlights__highlight {
   width: rem(200px);
 
-  @include mappy-bp(xs) {
+  @include mappy-bp(sm) {
     width: rem(240px);
   }
 
   & + & {
     margin-top: rem(40px);
 
-    @include mappy-bp(xs) {
-      margin-top: 0;
-      margin-left: rem(40px);
-    }
-
     @include mappy-bp(sm) {
+      margin-top: 0;
       margin-left: rem(80px);
     }
   }
