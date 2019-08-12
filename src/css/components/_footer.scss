@@ -64,6 +64,11 @@ $footer-padding: 100px;
   &.active {
     color: $color-primary;
   }
+
+  svg {
+    height: rem(12px);
+    display: inline-block;
+  }
 }
 
 // Scroll up

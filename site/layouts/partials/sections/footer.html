@@ -15,6 +15,12 @@
         {{/* Meta menu */}}
         <ul class="c-footer__col c-footer__meta">
           <li class="c-footer__meta-item">
+            <a class="c-footer__meta-link" href="https://www.facebook.com/woebking" target="_blank">
+              {{ partial "components/svg" (dict "svg" "facebook") }}
+              <span class="u-invisible">Facebook</span>
+            </a>
+          </li>
+          <li class="c-footer__meta-item">
             <a class="c-footer__meta-link" href="{{ ref . "impressum/index.md" }}">Impressum</a>
           </li>
           <li class="c-footer__meta-item">

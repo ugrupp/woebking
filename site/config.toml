@@ -1,6 +1,6 @@
 baseurl = "/"
 DefaultContentLanguage = "de"
-title = "Wöbking"
+title = "Wöbking GmbH"
 
 enableRobotsTXT = true
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]

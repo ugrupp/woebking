@@ -17,7 +17,10 @@
 <meta name="og:description" content="{{ . }}">
 {{ end }}
 
-<meta name="keywords" content="">
+{{/* Keywords */}}
+{{ with .Keywords }}
+<meta name="keywords" content="{{ range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}">
+{{ end }}
 
 {{/* Remaining og tags */}}
 <meta property="og:locale" content="{{ $.Site.Params.locale }}" />
