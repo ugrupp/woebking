@@ -28,9 +28,18 @@
 
                 <div class="c-downloads-highlights__highlight-title">
                   {{ partial "components/svg" (dict "svg" "download-1") }}
-                  <strong>{{ .name | safeHTML}}</strong>
+                  <strong>{{ .name | safeHTML}}{{ if $.Resources.GetMatch .srcEn }} <span>(de)</span>{{ end }}</strong>
                 </div>
               </a>
+
+              {{ if $.Resources.GetMatch .srcEn }}
+                <a class="c-downloads-highlights__highlight-link" href="{{ with $.Resources.GetMatch .srcEn }}{{ .Permalink }}{{ end }}" target="_blank">
+                  <div class="c-downloads-highlights__highlight-title">
+                    {{ partial "components/svg" (dict "svg" "download-1") }}
+                    <strong>{{ .name | safeHTML}} <span>(en)</span></strong>
+                  </div>
+                </a>
+              {{ end }}
             </li>
           {{ end }}
         </ul>

@@ -37,6 +37,10 @@ $downloads-indicator-size: 32px;
   &:focus {
     color: $color-primary;
   }
+
+  & + & {
+    margin-top: .75em;
+  }
 }
 
 .c-downloads-highlights__highlight-img-wrapper {
@@ -58,7 +62,10 @@ $downloads-indicator-size: 32px;
   @include typi('richtext');
   display: flex;
   align-items: baseline;
-  margin-top: 1.125em;
+
+  .c-downloads-highlights__highlight-img-wrapper + & {
+    margin-top: 1.125em;
+  }
 
   svg {
     flex-shrink: 0;
@@ -66,6 +73,11 @@ $downloads-indicator-size: 32px;
     color: $color-primary;
     width: rem(12px);
     height: rem(12px);
+  }
+
+  span {
+    color: $color-content-ci;
+    font-size: 14 / 17 * 1em;
   }
 }
 
