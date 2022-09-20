@@ -40,6 +40,15 @@
                   </div>
                 </a>
               {{ end }}
+
+              {{ if $.Resources.GetMatch .srcUa }}
+                <a class="c-downloads-highlights__highlight-link" href="{{ with $.Resources.GetMatch .srcUa }}{{ .Permalink }}{{ end }}" target="_blank">
+                  <div class="c-downloads-highlights__highlight-title">
+                    {{ partial "components/svg" (dict "svg" "download-1") }}
+                    <strong>{{ .name | safeHTML}} <span>(ua)</span></strong>
+                  </div>
+                </a>
+              {{ end }}
             </li>
           {{ end }}
         </ul>
