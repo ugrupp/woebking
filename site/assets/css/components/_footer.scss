@@ -1,0 +1,94 @@
+//
+// Footer
+// --------------------------------------------------
+
+$footer-padding: 100px;
+
+.c-footer {
+  position: relative;
+  z-index: index($z-index, footer);
+
+  background-color: $color-gray-6;
+  color: $color-white;
+  @include font-smoothing;
+  @include typi("richtext-sm");
+
+  padding-top: rem(60px);
+  padding-bottom: rem(60px);
+
+  @include mappy-bp(md) {
+    padding-top: rem(120px);
+    padding-bottom: rem(120px);
+  }
+}
+
+.c-footer__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+// Meta & Credit
+.c-footer__cols {
+  @include mappy-bp(sm) {
+    display: flex;
+  }
+}
+
+.c-footer__col {
+  & + & {
+    margin-top: rem(40px);
+
+    @include mappy-bp(sm) {
+      margin-top: 0;
+      margin-left: rem(80px);
+    }
+
+    @include mappy-bp(md) {
+      margin-left: rem(100px);
+    }
+  }
+}
+
+.c-footer__meta-item {
+  & + & {
+    margin-top: rem(4px);
+  }
+}
+
+.c-footer__meta-link {
+  color: rgba(255, 255, 255, .3);
+  transition: color $transition-time-default;
+
+  &:hover,
+  &:focus,
+  &.active {
+    color: $color-primary;
+  }
+
+  svg {
+    height: rem(12px);
+    display: inline-block;
+  }
+}
+
+// Scroll up
+.c-footer__scroll-up {
+  margin-left: rem(30px);
+  display: block;
+  transition: color $transition-time-default;
+
+  height: rem(37px);
+  width: rem(23px);
+
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}

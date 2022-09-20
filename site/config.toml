@@ -5,6 +5,11 @@ title = "Wöbking GmbH"
 enableRobotsTXT = true
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [languages]
   [languages.de]
     locale = "de_DE"
