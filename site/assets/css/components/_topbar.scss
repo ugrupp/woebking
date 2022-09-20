@@ -1,0 +1,96 @@
+//
+// Topbar
+// --------------------------------------------------
+
+@use "sass:math";
+
+.c-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: index($z-index, topbar);
+  opacity: 0;
+
+  height: rem($topbar-height-compact);
+
+  @include mappy-bp($bp-menu-collapse) {
+    height: rem($topbar-height-top);
+  }
+
+  .is-menu-open & {
+    @include mappy-bp(max $bp-menu-collapse) {
+      background-color: $overlay-bg;
+    }
+  }
+
+  > .o-container {
+    height: 100%;
+  }
+}
+
+// Headroom modifiers
+.c-topbar--headroom-initialized {
+  opacity: 1;
+  transition-property: all;
+  transition-duration: $transition-time-medium;
+}
+
+.c-topbar--unpinned {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.c-topbar--not-top.c-topbar--pinned {
+  background-color: #fff;
+}
+
+.c-topbar--compact {
+  height: rem($topbar-height-compact);
+}
+
+
+.c-topbar__inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+// Menu wrapper
+.c-topbar__menu {
+  margin-left: auto;
+  align-self: flex-end;
+  margin-bottom: rem(10px);
+
+  @include mappy-bp($bp-menu-collapse) {
+    margin-bottom: rem(20px);
+  }
+}
+
+// Logo
+$logo-ratio: math.div(157, 90);
+
+.c-topbar__logo {
+  flex-shrink: 0;
+  margin-right: rem(20px);
+
+  height: rem(60px);
+  width: rem(60px * $logo-ratio);
+  transition: all $transition-time-medium;
+
+  @include mappy-bp($bp-menu-collapse) {
+    height: rem(90px);
+    width: rem(90px * $logo-ratio);
+  }
+
+  .c-topbar--compact & {
+    height: rem(60px);
+    width: rem(60px * $logo-ratio);
+  }
+
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}

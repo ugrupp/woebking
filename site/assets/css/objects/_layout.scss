@@ -1,0 +1,74 @@
+//
+// Layout
+// --------------------------------------------------
+
+// Pagelayout (outer wrapper)
+.o-pagelayout {
+}
+
+// Main (content wrapper)
+.o-main {
+  padding-top: 100vh; // match fixed hero
+}
+
+.o-main--half-hero {
+  padding-top: 55vh;
+  margin-bottom: 45vh;
+}
+
+.o-main__content {
+  position: relative;
+  z-index: index($z-index, content);
+}
+
+// default section
+.o-main__section {
+  position: relative;
+  z-index: index($z-index, content-section);
+
+  background-color: $color-white;
+  @include section-padding;
+
+  > * {
+    position: relative;
+  }
+}
+
+// light bg color
+.o-main__section--bg-light {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: $color-gray-e;
+  }
+}
+
+// secondary bg color
+.o-main__section--bg-secondary {
+  background-color: rgba($color-secondary, .9);
+  color: $color-white;
+  @include font-smoothing;
+}
+
+// no pad
+.o-main__section--no-pad {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+// overlaps
+.o-main__section--overlap-top {
+  &::before {
+    top: rem(-$overlap-size);
+  }
+}
+
+.o-main__section--overlap-bottom {
+  &::before {
+    bottom: rem(-$overlap-size);
+  }
+}
