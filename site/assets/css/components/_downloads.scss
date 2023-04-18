@@ -175,3 +175,17 @@ $downloads-indicator-size: 32px;
 .c-downloads-list__item-download {
   display: block;
 }
+
+// Single download
+.c-download {
+  color: $color-secondary;
+  @include typi("richtext");
+  display: flex;
+  align-items: center;
+  padding: rem(20px) 0 rem(10px);
+  border-bottom: 1px solid $color-gray-6;
+
+  .c-downloads-indicator + span {
+    margin-left: rem(20px);
+  }
+}

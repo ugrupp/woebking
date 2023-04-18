@@ -78,6 +78,25 @@
     padding-left: 1em;
   }
 
+  ol {
+    list-style: decimal;
+    padding-left: 1em;
+
+    ol {
+      counter-reset: list;
+      padding-left: 0;
+
+      > li {
+        list-style: none;
+
+        &:before {
+          content: counter(list, lower-alpha) ") ";
+          counter-increment: list;
+        }
+      }
+    }
+  }
+
   ul.c-list--highlighted {
     padding-left: 0;
 

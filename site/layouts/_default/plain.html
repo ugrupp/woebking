@@ -17,6 +17,19 @@
               <div class="c-richtext c-richtext--plain c-richtext--primary">
                 {{ .Content }}
               </div>
+
+              <div class="o-main__downloads">
+                {{ range .Params.downloads }}
+                  {{ with $.Resources.GetMatch . }}
+                    <a class="c-download" href="{{ .Permalink }}" target="_blank">
+                      <div class="c-downloads-indicator">
+                        {{ partial "components/svg" (dict "svg" "download-1") }}
+                      </div>
+                      <span>{{ .Title }}</span>
+                    </a>
+                  {{ end }}
+                {{ end }}
+              </div>
             </div>
           {{end}}
         </div>

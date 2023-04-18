@@ -1,3 +1,8 @@
+---
+downloads:
+- 230411-Wöbking-Allgemeine-Geschäftsbedingungen.pdf
+---
+
 ## 7. Sicherungsrechte
 
 7.1. Die gelieferte Ware bleibt bis zur vollständigen Erfüllung unserer Kaufpreisforderung unser Eigentum. Ist der Käufer Unternehmer, bleibt die gelieferte Ware bis zur vollständigen Erfüllung sämtlicher Forderungen, die wir gegen den Käufer haben, unser Eigentum. Der Käufer darf unsere Ware weder verpfänden noch sicherungsübereignen. Er darf sie jedoch, wenn der Käufer Unternehmer ist, im gewöhnlichen Geschäftsverkehr weiterverkaufen oder verarbeiten, es sei denn, er hätte den Anspruch gegen einen Vertragspartner bereits im Voraus einem Dritten wirksam abgetreten oder mit dem Vertragspartner ein Abtretungsverbot vereinbart.
