@@ -1,5 +1,6 @@
 {
-    "files.associations": {
-        "*.html": "gohtml"
-    }
+  "files.associations": {
+    "*.html": "go-template"
+  },
+  "editor.formatOnSave": false
 }

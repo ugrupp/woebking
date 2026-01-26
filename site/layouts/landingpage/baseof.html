@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="{{ $.Site.Language.Lang }}">
+  <head>
+    {{/* Meta tags */}}
+    {{ partial "global/meta.html" . }}
+
+    {{/* <head> includes */}}
+    {{ partial "global/includes-head.html" . }}
+  </head>
+
+  <body>
+    <a href="#main" class="u-invisible">Jump to content</a>
+
+    <div class="o-pagelayout" id="start">
+      {{/* Top */}}
+      {{ partial "sections/top-landingpage.html" . }}
+
+      {{/* Hero */}}
+      {{ partial "sections/hero" . }}
+
+      {{/* Content */}}
+      <main class="o-main o-main--half-hero" id="main">
+        {{ block "main" . }}{{ end }}
+      </main>
+
+      {{/* Footer */}}
+      {{ partial "sections/footer.html" . }}
+    </div>
+
+    {{/* <body> includes */}}
+    {{ partial "global/includes-body.html" . }}
+  </body>
+</html>

@@ -1,0 +1,80 @@
+{{ define "main" }}
+<div class="o-main__content" id="content">
+  <section class="o-main__section o-main__section--bg-light">
+    <div class="o-container">
+      <div class="c-richtext c-richtext--plain c-richtext--primary">
+        {{ .Content }}
+      </div>
+
+      <form id="terralift-form" action="https://woebking.com/api/terralift-form.php" method="POST">
+        <fieldset>
+          <legend>Ich interessiere mich für:</legend>
+
+          <div>
+            <label>
+              <input type="checkbox" name="interest[]" value="katalog">
+              Neuen Wöbking-Katalog mit Terralift erhalten
+            </label>
+          </div>
+
+          <div>
+            <label>
+              <input type="checkbox" name="interest[]" value="beratung">
+              Persönliche Beratung / Rückruf
+            </label>
+          </div>
+
+          <div>
+            <label>
+              <input type="checkbox" name="interest[]" value="referenzen">
+              Infos zu Praxiseinsätzen & Referenzen
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Kontaktdaten</legend>
+
+          <div>
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div>
+            <label for="company">Unternehmen / Anlage *</label>
+            <input type="text" id="company" name="company" required>
+          </div>
+
+          <div>
+            <label for="email">E-Mail *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div>
+            <label for="phone">Telefon (optional, empfohlen für Rückruf)</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+
+          <div>
+            <label for="location">PLZ / Ort (optional, hilfreich für Vertrieb)</label>
+            <input type="text" id="location" name="location">
+          </div>
+        </fieldset>
+
+        <div>
+          <label>
+            <input type="checkbox" name="privacy_consent" required style="width:20px; height:20px; vertical-align: middle; margin-right: 8px;">
+            <span>Ich stimme zu, dass meine Angaben zur Bearbeitung meiner Anfrage und zur Kontaktaufnahme durch die Wöbking GmbH verwendet werden. Weitere Informationen finde ich in der <a href="/datenschutz/" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a>. *</span>
+          </label>
+        </div>
+
+        <div>
+          <button type="submit" class="c-button c-button--primary">Anfrage absenden</button>
+        </div>
+
+        <div id="form-message"></div>
+      </form>
+    </div>
+  </section>
+</div>
+{{ end }}
