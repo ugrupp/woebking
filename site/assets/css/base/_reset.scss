@@ -137,6 +137,12 @@ textarea {
   border-radius: 0;
 }
 
+// Preserve default appearance for checkboxes and radios
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: auto;
+}
+
 input:focus {
   outline: 0;
 }

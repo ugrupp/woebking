@@ -7,6 +7,11 @@ $color-black: #000;
 $color-white: #fff;
 
 // Shades of gray
+$color-gray-75: #404040;
+$color-gray-35: #a6a6a6;
+$color-gray-8: #ebebeb;
+
+// Shades of gray (legacy)
 $color-gray-6: #6f7072;
 $color-gray-e: #eff0f0;
 
@@ -15,5 +20,9 @@ $color-primary: #72ae25;
 $color-secondary: #006833;
 
 // Content color mapping
-$color-content: $color-gray-6;
+$color-content: $color-gray-75;
 $color-content-ci: $color-primary;
+
+// Form message colors
+$color-form-error-bg: #f8d7da;
+$color-form-error-text: #721c24;

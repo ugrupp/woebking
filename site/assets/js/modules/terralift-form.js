@@ -10,6 +10,7 @@ export default class TerraliftForm {
         this.inited = true;
         this.messageDiv = document.getElementById('form-message');
         this.submitButton = this.form.querySelector('button[type="submit"]');
+        this.submitWrapper = this.form.querySelector('.c-terralift-form__submit');
         this.originalButtonText = this.submitButton.textContent;
       } else {
         // Form not found - this is OK for pages without the form
@@ -44,7 +45,7 @@ export default class TerraliftForm {
   handleSubmit() {
     // Disable submit button
     this.submitButton.disabled = true;
-    this.submitButton.textContent = 'Wird gesendet...';
+    this.submitButton.textContent = 'Wird gesendet …';
 
     // Hide any previous messages
     this.messageDiv.style.display = 'none';
@@ -81,19 +82,20 @@ export default class TerraliftForm {
     this.messageDiv.style.display = 'block';
 
     if (data.success) {
-      this.messageDiv.classList.remove('is-error');
-      this.messageDiv.classList.add('is-success');
+      this.messageDiv.classList.remove('error');
+      this.messageDiv.classList.add('success');
       this.messageDiv.textContent = data.message;
 
       // Reset form on success
       this.form.reset();
 
-      // Re-enable submit button and restore text
-      this.submitButton.disabled = false;
-      this.submitButton.textContent = this.originalButtonText;
+      // Hide submit button on success
+      if (this.submitWrapper) {
+        this.submitWrapper.style.display = 'none';
+      }
     } else {
-      this.messageDiv.classList.remove('is-success');
-      this.messageDiv.classList.add('is-error');
+      this.messageDiv.classList.remove('success');
+      this.messageDiv.classList.add('error');
       this.messageDiv.textContent = data.message || 'Ein Fehler ist aufgetreten.';
 
       // Re-enable submit button on error
@@ -104,8 +106,8 @@ export default class TerraliftForm {
 
   showError() {
     this.messageDiv.style.display = 'block';
-    this.messageDiv.classList.remove('is-success');
-    this.messageDiv.classList.add('is-error');
+    this.messageDiv.classList.remove('success');
+    this.messageDiv.classList.add('error');
     this.messageDiv.textContent = 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.';
 
     // Re-enable submit button on error

@@ -1,0 +1,27 @@
+//
+// Form Input Component
+// --------------------------------------------------
+
+.c-form-input__label {
+  display: block;
+  margin-bottom: rem(5px);
+  @include typi(form-label);
+}
+
+.c-form-input__field {
+  width: 100%;
+  padding: rem(10px);
+  border: 1px solid $color-gray-35;
+  @include typi(form-input);
+  color: $color-content;
+  background-color: $color-white;
+
+  @include mappy-bp(md) {
+  padding: rem(15px) rem(10px);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-primary;
+  }
+}

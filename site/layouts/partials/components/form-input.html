@@ -1,0 +1,11 @@
+<div class="c-form-input">
+  <label for="{{ .id }}" class="c-form-input__label">{{ .label }}</label>
+  <input
+    type="{{ .type }}"
+    id="{{ .id }}"
+    name="{{ .name }}"
+    class="c-form-input__field"
+    {{ if .required }}required{{ end }}
+    {{ if .placeholder }}placeholder="{{ .placeholder }}"{{ end }}
+  >
+</div>

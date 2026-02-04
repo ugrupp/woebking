@@ -6,13 +6,19 @@
   @include button-reset;
 
   @include typi("button");
+  cursor: pointer;
   background-color: $color-content-ci;
   color: $color-white;
-  padding: rem(24px);
+  @include font-smoothing;
+  padding: rem(20px);
   transition: background-color $transition-time-default;
 
   display: inline-flex;
   align-items: center;
+
+  @include mappy-bp(md) {
+    padding: rem(24px);
+  }
 
   svg {
     flex-shrink: 0;

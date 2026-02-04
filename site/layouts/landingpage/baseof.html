@@ -15,11 +15,8 @@
       {{/* Top */}}
       {{ partial "sections/top-landingpage.html" . }}
 
-      {{/* Hero */}}
-      {{ partial "sections/hero" . }}
-
       {{/* Content */}}
-      <main class="o-main o-main--half-hero" id="main">
+      <main class="o-main o-main--no-hero" id="main">
         {{ block "main" . }}{{ end }}
       </main>
 

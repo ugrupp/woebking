@@ -49,7 +49,22 @@ $typi: (
   ),
 
   button: (
-    null: (18px, 1.2),
+    null: (16px, 1.2),
+    md: (18px),
+  ),
+
+  form-input: (
+    null: (16px, 1.5),
+  ),
+
+  form-label: (
+    null: (15px, 1.5),
+    md: (17px),
+  ),
+
+  form-legend: (
+    null: (15px, 1.5),
+    md: (17px),
   ),
 );
 /* stylelint-enable */

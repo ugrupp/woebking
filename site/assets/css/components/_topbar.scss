@@ -27,6 +27,11 @@
   > .o-container {
     height: 100%;
   }
+
+  &:not([data-topbar]) {
+    opacity: 1;
+    position: absolute;
+  }
 }
 
 // Headroom modifiers

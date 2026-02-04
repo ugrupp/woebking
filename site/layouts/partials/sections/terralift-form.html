@@ -1,0 +1,76 @@
+{{ with .Resources.GetMatch "terralift-form*.md" }}
+  {{ $title := .Title }}
+  <section class="o-main__section o-main__section--no-pad o-main__section--bg-light" id="terralift-form">
+    <div class="c-terralift-form">
+      {{/* Canvas */}}
+      <div class="c-terralift-form__canvas">
+        {{/* Image */}}
+        <div class="c-terralift-form__canvas-img-wrapper">
+          {{ with $.Resources.GetMatch "intro*.jpg" }}
+            {{ $imageSmall := .Resize "500x" }}
+            {{ $imageMedium := .Resize "1000x" }}
+
+            <img
+              alt="Terralift"
+              src="{{ $imageSmall.RelPermalink }}"
+              srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              data-srcset="{{ $imageSmall.RelPermalink }} 500w, {{ $imageMedium.RelPermalink }} 1000w"
+              data-sizes="auto"
+              class="c-terralift-form__canvas-img lazyload" />
+          {{ end }}
+        </div>
+      </div>
+
+      {{/* Content */}}
+      <div class="c-terralift-form__content">
+        <div class="o-container">
+          <div class="c-terralift-form__cols o-grid">
+            {{/* Col 1 - Headline */}}
+            <div class="c-terralift-form__col1 o-grid__col">
+              <div class="c-terralift-form__headline">
+                <h1 class="c-headline">{{ .Title | safeHTML }}</h1>
+              </div>
+            </div>
+
+          {{/* Col 2 - Form */}}
+          <div class="c-terralift-form__col2 o-grid__col">
+            <div class="c-richtext c-richtext--primary">
+              {{ .Content }}
+            </div>
+
+            <form id="terralift-form" action="https://woebking.com/api/terralift-form.php" method="POST">
+              <fieldset>
+                <legend>Ich interessiere mich für:</legend>
+
+                {{ partial "components/form-checkbox" (dict "name" "interest[]" "value" "katalog" "label" "Neuen Wöbking-Katalog mit Terralift erhalten") }}
+                {{ partial "components/form-checkbox" (dict "name" "interest[]" "value" "beratung" "label" "Persönliche Beratung / Rückruf") }}
+                {{ partial "components/form-checkbox" (dict "name" "interest[]" "value" "referenzen" "label" "Infos zu Praxiseinsätzen & Referenzen") }}
+              </fieldset>
+
+              <fieldset>
+                <legend>Kontaktdaten</legend>
+
+                {{ partial "components/form-input" (dict "id" "name" "name" "name" "label" "Name *" "type" "text" "required" true) }}
+                {{ partial "components/form-input" (dict "id" "company" "name" "company" "label" "Unternehmen / Anlage *" "type" "text" "required" true) }}
+                {{ partial "components/form-input" (dict "id" "email" "name" "email" "label" "E-Mail *" "type" "email" "required" true) }}
+                {{ partial "components/form-input" (dict "id" "phone" "name" "phone" "label" "Telefon" "type" "tel") }}
+                {{ partial "components/form-input" (dict "id" "location" "name" "location" "label" "PLZ / Ort" "type" "text") }}
+              </fieldset>
+
+              <div class="c-terralift-form__privacy">
+                {{ partial "components/form-checkbox" (dict "name" "privacy_consent" "value" "" "label" "Ich stimme zu, dass meine Angaben zur Bearbeitung meiner Anfrage und zur Kontaktaufnahme durch die Wöbking GmbH verwendet werden. Weitere Informationen finde ich in der <a href=\"/datenschutz/\" target=\"_blank\" rel=\"noopener noreferrer\">Datenschutzerklärung</a>. *" "required" true) }}
+              </div>
+
+              <div class="c-terralift-form__submit">
+                <button type="submit" class="c-button c-button--primary">Anfrage absenden</button>
+              </div>
+
+              <div id="form-message"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

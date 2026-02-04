@@ -16,6 +16,14 @@
   margin-bottom: 45vh;
 }
 
+.o-main--no-hero {
+  padding-top: calc(#{rem($topbar-height-compact)} + #{rem($section-padding)});
+
+  @include mappy-bp(md) {
+    padding-top: calc(#{rem($topbar-height-top)} + #{rem($section-padding)});
+  }
+}
+
 .o-main__content {
   position: relative;
   z-index: index($z-index, content);

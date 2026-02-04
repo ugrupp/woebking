@@ -1,0 +1,24 @@
+//
+// Form Checkbox Component
+// --------------------------------------------------
+
+.c-form-checkbox__label {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.c-form-checkbox__input {
+  width: rem(24px);
+  height: rem(24px);
+  margin-right: rem(8px);
+  flex-shrink: 0;
+  cursor: pointer;
+  accent-color: $color-secondary;
+}
+
+.c-form-checkbox__text {
+  flex: 1;
+  @include typi(form-label);
+  transform: translateY(0.15em);
+}

@@ -113,7 +113,7 @@ $downloads-indicator-size: 32px;
   display: flex;
   align-items: center;
   padding: rem(20px) 0 rem(10px);
-  border-bottom: 1px solid $color-gray-6;
+  border-bottom: 1px solid $color-content;
 
   .c-downloads-indicator + span {
     margin-left: rem(20px);

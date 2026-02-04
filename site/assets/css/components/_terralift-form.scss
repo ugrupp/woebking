@@ -1,0 +1,188 @@
+//
+// Terralift Form
+// --------------------------------------------------
+
+@use "sass:math";
+
+$canvas-height-xs: 238px;
+$canvas-height-sm: 560px;
+$canvas-height-md: 680px;
+
+.c-terralift-form {
+  position: relative;
+  z-index: 5; // < content
+}
+
+.c-terralift-form__canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: rem($canvas-height-xs);
+
+  @include mappy-bp($bp-grid-collapse) {
+    width: 50%;
+  }
+  @include mappy-bp($bp-grid-collapse-lg) {
+    width: calc(50% - #{rem(math.div($grid-gutter-md, 2))});
+  }
+
+  @include mappy-bp(sm) {
+    height: rem($canvas-height-sm);
+  }
+
+  @include mappy-bp(md) {
+    height: rem($canvas-height-md);
+  }
+
+  // bg coloring
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10; // > bg
+    background-color: rgba($color-primary, .84);
+  }
+}
+
+.c-terralift-form__canvas-img-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 5; // < overlay
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.c-terralift-form__canvas-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 69%;
+  transition: all $transition-time-long;
+
+  &.lazyload,
+  &.lazyloading {
+    opacity: 0;
+  }
+}
+
+
+// Content
+.c-terralift-form__content {
+  position: relative;
+  z-index: 10; // > canvas
+
+  > .o-container {
+    position: relative;
+  }
+}
+
+// Arrow hint
+.c-terralift-form__arrow-hint {
+  display: block;
+  color: $color-white;
+  height: rem(37px);
+  width: rem(23px);
+
+  position: absolute;
+  left: rem($container-gutter);
+  top: rem(-18.5px);
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.c-terralift-form__cols {
+  @include section-padding;
+}
+
+.c-terralift-form__col1.o-grid__col {
+  @include mappy-bp($bp-grid-collapse-lg) {
+    padding-right: rem($grid-gutter-md);
+  }
+}
+
+// Headline
+.c-terralift-form__headline {
+  color: $color-white;
+  @include font-smoothing;
+
+  height: rem($canvas-height-xs - $section-padding);
+
+  @include mappy-bp(sm) {
+    height: rem($canvas-height-sm - $section-padding);
+  }
+
+  @include mappy-bp(md) {
+    height: rem($canvas-height-md - $section-padding-md);
+  }
+}
+
+// Form container styling
+.c-terralift-form__col2 {
+  form {
+    margin-top: rem(30px);
+  }
+
+  fieldset {
+    border: none;
+    padding: 0;
+
+    legend {
+      margin-bottom: rem(15px);
+      color: $color-secondary;
+      @include typi(form-legend);
+    }
+  }
+
+  fieldset + fieldset {
+    margin-top: rem(30px);
+  }
+
+  .c-form-input + .c-form-input {
+    margin-top: rem(20px);
+  }
+
+  .c-form-checkbox + .c-form-checkbox {
+    margin-top: rem(10px);
+  }
+
+  .c-terralift-form__submit,
+  .c-terralift-form__privacy {
+    margin-top: rem(30px);
+  }
+
+  #form-message {
+    margin-top: rem(30px);
+    padding: rem(15px);
+    display: none;
+
+    &.success {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+
+    &.error {
+      background-color: $color-form-error-bg;
+      color: $color-form-error-text;
+    }
+
+    &:not(:empty) {
+      display: block;
+    }
+  }
+}

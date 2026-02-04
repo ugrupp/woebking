@@ -8,7 +8,7 @@ $footer-padding: 100px;
   position: relative;
   z-index: index($z-index, footer);
 
-  background-color: $color-gray-6;
+  background-color: $color-content;
   color: $color-white;
   @include font-smoothing;
   @include typi("richtext-sm");
