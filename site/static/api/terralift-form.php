@@ -23,7 +23,7 @@ use PHPMailer\PHPMailer\Exception;
 $allowedOrigins = [
     'https://www.woebking.com',
     'https://woebking.com',
-    'http://localhost:5173',  // Temporary for development
+    // 'http://localhost:5173',  // Temporary for development
 ];
 
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
@@ -53,7 +53,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // CSRF protection - check referer
-$allowedDomains = ['woebking.com', 'localhost:5173']; // localhost temporary for development
+$allowedDomains = [
+    'woebking.com',
+    // 'localhost:5173' // Temporary for development
+];
 $referer = $_SERVER['HTTP_REFERER'] ?? '';
 $isValidReferer = false;
 foreach ($allowedDomains as $domain) {
@@ -172,9 +175,9 @@ foreach ($interestsSanitized as $interest) {
 
 // Email configuration
 $recipients = [
-    // 'thorsten.cramer@woebking.com',
-    // 'michael.kruse@woebking.com',
-    'urs@21sieben.de'
+    'thorsten.cramer@woebking.com',
+    'michael.kruse@woebking.com',
+    // 'urs@21sieben.de' // For testing purposes
 ];
 
 $fromEmail = 'noreply@woebking.com';
