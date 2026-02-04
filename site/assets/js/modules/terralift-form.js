@@ -8,7 +8,7 @@ export default class TerraliftForm {
       // init success depends on form element being found
       if (this.form) {
         this.inited = true;
-        this.messageDiv = document.getElementById('form-message');
+        this.messageDiv = this.form.querySelector('#form-message');
         this.submitButton = this.form.querySelector('button[type="submit"]');
         this.submitWrapper = this.form.querySelector('.c-terralift-form__submit');
         this.originalButtonText = this.submitButton.textContent;

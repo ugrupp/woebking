@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // CSRF protection - check referer
-$allowedDomains = ['woebking.com', 'localhost:5173'];
+$allowedDomains = ['woebking.com', 'localhost:5173']; // localhost temporary for development
 $referer = $_SERVER['HTTP_REFERER'] ?? '';
 $isValidReferer = false;
 foreach ($allowedDomains as $domain) {

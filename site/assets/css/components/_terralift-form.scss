@@ -174,6 +174,7 @@ $canvas-height-md: 680px;
     &.success {
       background-color: $color-primary;
       color: $color-white;
+      @include font-smoothing;
     }
 
     &.error {
