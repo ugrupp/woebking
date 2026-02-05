@@ -272,26 +272,44 @@ $notificationBody = '
 </html>
 ';
 
-// Confirmation email to customer
-$confirmationSubject = 'Vielen Dank für Ihr Interesse an Terralift';
-$confirmationBody = '
+// Send notifications to Wöbking team
+$notificationSent = sendEmailPHPMailer($recipients, $notificationSubject, $notificationBody, $fromEmail, $fromName, $email, $smtpHost, $smtpPort, $smtpUsername, $smtpPassword);
+
+if (!$notificationSent) {
+    error_log("Failed to send notification email to recipients: " . implode(', ', $recipients));
+}
+
+
+// Determine which confirmation emails to send based on interests
+$hasKatalog = in_array('katalog', $interestsSanitized);
+$hasReferenzen = in_array('referenzen', $interestsSanitized);
+$hasBeratung = in_array('beratung', $interestsSanitized);
+
+// Modul A: Send if catalog or references are requested
+if ($hasKatalog || $hasReferenzen) {
+    $confirmationSubject = 'Ihre Anfrage zu Wöbking & Terralift';
+    $confirmationBody = '
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
 </head>
 <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-    <p>Hallo ' . $name . ',</p>
+    <p>Guten Tag ' . $name . ',</p>
 
-    <p><strong>vielen Dank für Ihre Anfrage.</strong></p>
+    <p><strong>vielen Dank für Ihr Interesse an Wöbking und Terralift.</strong></p>
 
-    <p>Wir melden uns zeitnah persönlich bei Ihnen bzw. senden Ihnen die gewünschten Informationen zu.</p>
+    <p>Gerne stellen wir Ihnen die von Ihnen angeforderten Informationen zur Verfügung.</p>
 
-    <p>Der neue Wöbking-Katalog mit Terralift befindet sich aktuell in Vorbereitung. Gerne informieren wir Sie, sobald dieser druckfrisch verfügbar ist.</p>
+    <p>Der neue Wöbking-Katalog mit integrierter Terralift-Systematik befindet sich derzeit in Vorbereitung. Nach Fertigstellung lassen wir Ihnen diesen gerne zukommen.</p>
+
+    <p>Informationen zu Anwendungsbeispielen von Terralift-Produkten stellen wir Ihnen kurzfristig zur Verfügung.</p>
+
+    <p>Sollten sich im Anschluss Fragen ergeben oder Sie einen persönlichen Austausch wünschen, können Sie jederzeit gern auf uns zukommen.</p>
 
     <p style="margin-top: 30px;">
-        Freundliche Grüße<br>
-        Ihr Wöbking-Team
+        Mit freundlichen Grüßen<br>
+        Wöbking GmbH
     </p>
 
     <hr style="margin-top: 40px; border: none; border-top: 1px solid #6f7072;">
@@ -310,17 +328,57 @@ $confirmationBody = '
 </html>
 ';
 
-// Send emails
-$notificationSent = sendEmailPHPMailer($recipients, $notificationSubject, $notificationBody, $fromEmail, $fromName, $email, $smtpHost, $smtpPort, $smtpUsername, $smtpPassword);
+    $confirmationSent = sendEmailPHPMailer($email, $confirmationSubject, $confirmationBody, $fromEmail, $fromName, $fromEmail, $smtpHost, $smtpPort, $smtpUsername, $smtpPassword);
 
-if (!$notificationSent) {
-    error_log("Failed to send notification email to recipients: " . implode(', ', $recipients));
+    if (!$confirmationSent) {
+        error_log("Failed to send Modul A confirmation email to: $email");
+    }
 }
 
-$confirmationSent = sendEmailPHPMailer($email, $confirmationSubject, $confirmationBody, $fromEmail, $fromName, $fromEmail, $smtpHost, $smtpPort, $smtpUsername, $smtpPassword);
+// Modul B: Send if consultation is requested
+if ($hasBeratung) {
+    $confirmationSubject = 'Ihre Anfrage zur persönlichen Beratung';
+    $confirmationBody = '
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+    <p>Guten Tag ' . $name . ',</p>
 
-if (!$confirmationSent) {
-    error_log("Failed to send confirmation email to: $email");
+    <p><strong>vielen Dank für Ihr Interesse an Wöbking und Terralift.</strong></p>
+
+    <p>Sie haben eine persönliche Beratung angefragt. Gerne melden wir uns zeitnah bei Ihnen, um gemeinsam zu besprechen, welche Themen für Sie aktuell relevant sind und wie ein sinnvoller nächster Schritt aussehen kann.</p>
+
+    <p>Der Austausch erfolgt selbstverständlich unverbindlich und orientiert sich an Ihrem konkreten Bedarf.</p>
+
+    <p style="margin-top: 30px;">
+        Mit freundlichen Grüßen<br>
+        Wöbking GmbH
+    </p>
+
+    <hr style="margin-top: 40px; border: none; border-top: 1px solid #6f7072;">
+
+    <p style="font-size: 12px; color: #6f7072;">
+        <strong>Wöbking GmbH</strong><br>
+        Rheinstraße 36<br>
+        49090 Osnabrück/Hafen<br>
+        Deutschland<br>
+        <br>
+        Telefon: +49 541 62867<br>
+        E-Mail: <a href="mailto:info@woebking.com">info@woebking.com</a><br>
+        Web: <a href="https://www.woebking.com">www.woebking.com</a>
+    </p>
+</body>
+</html>
+';
+
+    $confirmationSent = sendEmailPHPMailer($email, $confirmationSubject, $confirmationBody, $fromEmail, $fromName, $fromEmail, $smtpHost, $smtpPort, $smtpUsername, $smtpPassword);
+
+    if (!$confirmationSent) {
+        error_log("Failed to send Modul B confirmation email to: $email");
+    }
 }
 
 // Log submission (optional - for debugging)

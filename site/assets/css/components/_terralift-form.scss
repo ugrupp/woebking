@@ -113,7 +113,7 @@ $canvas-height-xs: 238px;
     display: none;
 
     &.success {
-      background-color: $color-primary;
+      background-color: $color-secondary;
       color: $color-white;
       @include font-smoothing;
     }
