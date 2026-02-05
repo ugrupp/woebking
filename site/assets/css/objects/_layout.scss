@@ -24,6 +24,10 @@
   }
 }
 
+.o-main--no-padding {
+  padding-top: 0;
+}
+
 .o-main__content {
   position: relative;
   z-index: index($z-index, content);

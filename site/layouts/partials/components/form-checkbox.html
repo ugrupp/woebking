@@ -7,6 +7,6 @@
       class="c-form-checkbox__input"
       {{ if .required }}required{{ end }}
     >
-    <span class="c-form-checkbox__text c-richtext">{{ .label | safeHTML }}</span>
+    <span class="c-form-checkbox__text c-richtext">{{ .label | markdownify }}</span>
   </label>
 </div>

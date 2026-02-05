@@ -1,7 +1,5 @@
 ---
-title: Interesse an Terralift?<br>Bleiben Sie informiert.
+title: Interesse an Terralift?<br>**Bleiben Sie informiert.**
 ---
 
-## Terralift wird aktuell in den neuen Wöbking-Katalog integriert.
-
-Gerne informieren wir Sie persönlich und senden Ihnen Unterlagen zu.
+Der neue Wöbking-Katalog integriert die Terralift-Produkte in einem klar strukturierten, praxisnahen Format - ausgerichtet auf die Anforderungen im deutschsprachigen Raum.

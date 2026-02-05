@@ -7,7 +7,7 @@
 
   @include typi("button");
   cursor: pointer;
-  background-color: $color-content-ci;
+  background-color: $color-secondary;
   color: $color-white;
   @include font-smoothing;
   padding: rem(20px);

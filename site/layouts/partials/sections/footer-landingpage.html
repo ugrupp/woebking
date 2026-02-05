@@ -1,0 +1,27 @@
+{{/* Set headless footer bundle which holds the footer content */}}
+{{ $footer := .Site.GetPage "page" "footer" }}
+
+<footer class="c-footer c-footer--secondary">
+  <div class="o-container">
+    <div class="c-footer__content">
+      <div class="c-footer__cols">
+        {{/* Address */}}
+        <address class="c-footer__col">
+          {{ with $footer.Resources.GetMatch "terralift*.md" }}
+            {{ .Content }}
+          {{end}}
+        </address>
+
+        {{/* Meta menu */}}
+        <ul class="c-footer__col c-footer__meta">
+          <li class="c-footer__meta-item">
+            <a class="c-footer__meta-link" href="{{ ref . "impressum/index.md" }}">Impressum</a>
+          </li>
+          <li class="c-footer__meta-item">
+            <a class="c-footer__meta-link" href="{{ ref . "datenschutz/index.md" }}">Datenschutz</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

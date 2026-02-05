@@ -22,6 +22,11 @@ $footer-padding: 100px;
   }
 }
 
+.c-footer--secondary {
+  background-color: $color-secondary;
+  @include typi("richtext-lg");
+}
+
 .c-footer__content {
   display: flex;
   justify-content: space-between;
@@ -29,12 +34,16 @@ $footer-padding: 100px;
 
 // Meta & Credit
 .c-footer__cols {
+  width: 100%;
+
   @include mappy-bp(sm) {
     display: flex;
   }
 }
 
 .c-footer__col {
+  flex-grow: 1;
+
   & + & {
     margin-top: rem(40px);
 
@@ -68,6 +77,17 @@ $footer-padding: 100px;
   svg {
     height: rem(12px);
     display: inline-block;
+  }
+
+  .c-footer--secondary & {
+    color: rgba(255, 255, 255, .6);
+    transition: none;;
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: $color-white;
+    }
   }
 }
 

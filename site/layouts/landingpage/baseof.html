@@ -16,12 +16,12 @@
       {{ partial "sections/top-landingpage.html" . }}
 
       {{/* Content */}}
-      <main class="o-main o-main--no-hero" id="main">
+      <main class="o-main o-main--no-padding" id="main">
         {{ block "main" . }}{{ end }}
       </main>
 
       {{/* Footer */}}
-      {{ partial "sections/footer.html" . }}
+      {{ partial "sections/footer-landingpage.html" . }}
     </div>
 
     {{/* <body> includes */}}

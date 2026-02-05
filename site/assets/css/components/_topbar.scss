@@ -30,7 +30,19 @@
 
   &:not([data-topbar]) {
     opacity: 1;
-    position: absolute;
+    position: static;
+  }
+}
+
+.c-topbar--secondary {
+  background-color: $color-secondary;
+  color: $color-white;
+  @include font-smoothing;
+
+  height: rem($topbar-height-tall);
+
+  @include mappy-bp($bp-menu-collapse) {
+    height: rem($topbar-height-tall-md);
   }
 }
 
@@ -97,5 +109,16 @@ $logo-ratio: math.div(157, 90);
     display: block;
     height: 100%;
     width: 100%;
+  }
+
+  .c-topbar--secondary & {
+    height: 54%;
+    width: auto;
+
+    img {
+      display: block;
+      height: 100%;
+      width: auto;
+    }
   }
 }

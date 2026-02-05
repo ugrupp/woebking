@@ -3,23 +3,7 @@
   <section class="o-main__section o-main__section--no-pad o-main__section--bg-light">
     <div class="c-terralift-form">
       {{/* Canvas */}}
-      <div class="c-terralift-form__canvas">
-        {{/* Image */}}
-        <div class="c-terralift-form__canvas-img-wrapper">
-          {{ with $.Resources.GetMatch "intro*.jpg" }}
-            {{ $imageSmall := .Resize "500x" }}
-            {{ $imageMedium := .Resize "1000x" }}
-
-            <img
-              alt="Terralift"
-              src="{{ $imageSmall.RelPermalink }}"
-              srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-              data-srcset="{{ $imageSmall.RelPermalink }} 500w, {{ $imageMedium.RelPermalink }} 1000w"
-              data-sizes="auto"
-              class="c-terralift-form__canvas-img lazyload" />
-          {{ end }}
-        </div>
-      </div>
+      <div class="c-terralift-form__canvas"></div>
 
       {{/* Content */}}
       <div class="c-terralift-form__content">
@@ -28,23 +12,23 @@
             {{/* Col 1 - Headline */}}
             <div class="c-terralift-form__col1 o-grid__col">
               <div class="c-terralift-form__headline">
-                <h1 class="c-headline">{{ .Title | safeHTML }}</h1>
+                <h1 class="c-headline c-headline--secondary">{{ .Title | markdownify }}</h1>
               </div>
             </div>
 
           {{/* Col 2 - Form */}}
           <div class="c-terralift-form__col2 o-grid__col">
-            <div class="c-richtext c-richtext--primary">
+            <div class="c-richtext c-richtext--primary c-richtext--lg">
               {{ .Content }}
             </div>
 
             <form id="terralift-form" action="https://woebking.com/api/terralift-form.php" method="POST">
               <fieldset>
-                <legend>Ich interessiere mich für:</legend>
+                <legend>Möchten Sie den Wöbking-Katalog mit integrierter Terralift-Systematik anfordern oder weitere Informationen erhalten?</legend>
 
-                {{ partial "components/form-checkbox" (dict "name" "interest[]" "value" "katalog" "label" "Neuen Wöbking-Katalog mit Terralift erhalten") }}
-                {{ partial "components/form-checkbox" (dict "name" "interest[]" "value" "beratung" "label" "Persönliche Beratung / Rückruf") }}
-                {{ partial "components/form-checkbox" (dict "name" "interest[]" "value" "referenzen" "label" "Infos zu Praxiseinsätzen & Referenzen") }}
+                {{ partial "components/form-checkbox" (dict "name" "interest[]" "value" "katalog" "label" "Neuen Wöbking-Katalog mit Terralift anfordern") }}
+                {{ partial "components/form-checkbox" (dict "name" "interest[]" "value" "beratung" "label" "Informationen zu Anwendungsbeispielen von Terralift-Produkten anfordern") }}
+                {{ partial "components/form-checkbox" (dict "name" "interest[]" "value" "referenzen" "label" "Beratung anfragen – wir melden uns persönlich bei Ihnen") }}
               </fieldset>
 
               <fieldset>
