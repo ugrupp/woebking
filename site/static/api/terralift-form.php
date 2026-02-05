@@ -161,9 +161,9 @@ if (!empty($errors)) {
 
 // Prepare interest labels
 $interestLabels = [
-    'katalog' => 'Neuen Wöbking-Katalog mit Terralift erhalten',
-    'beratung' => 'Persönliche Beratung / Rückruf',
-    'referenzen' => 'Infos zu Praxiseinsätzen & Referenzen'
+    'katalog' => 'Neuen Wöbking-Katalog mit Terralift anfordern',
+    'referenzen' => 'Infos zu Anwendungsbeispielen von Terralift-Produkten',
+    'beratung' => 'Persönliche Beratung',
 ];
 
 $interestText = [];
