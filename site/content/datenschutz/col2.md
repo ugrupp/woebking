@@ -1,3 +1,8 @@
+---
+downloads:
+- datenschutzerklaerung-woebking-2026.pdf
+---
+
 ## Dauer der Speicherung/Löschung
 
 Wir speichern Ihre personenbezogenen Daten solange, wie eine wirksame Einwilligung von Ihnen vorliegt und/oder bei uns ein berechtigtes Interesse an der Speicherung besteht und dieses Interesse gegenüber Ihrem Interesse an der Nichtfortsetzung der Speicherung überwiegt. In dem Fall, dass unser berechtigtes Interesse an der Speicherung der personenbezogenen Daten Ihr Interesse an der Nichtfortsetzung der Speicherung nicht überwiegt, kann die Speicherung fortgesetzt werden, wenn diese aufgrund gesetzlicher Vorgaben erforderlich ist (z.B. aus steuerlichen Gründen). In diesem Fall erfolgt die Speicherung nur zur Erfüllung der gesetzlichen Vorgaben. Im Übrigen werden die Daten gelöscht.
