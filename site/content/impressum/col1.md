@@ -2,8 +2,8 @@
 ---
 
 ## Wöbking GmbH
-Rheinstraße 36  
-49090 Osnabrück/Hafen
+Robert-Bosch-Straße 20  
+49401 Damme
 
 Telefon +49 (0)541 / 62867  
 Fax +49 (0)541 / 682460  
@@ -13,8 +13,8 @@ Fax +49 (0)541 / 682460
 Geschäftsführer: Jannpeter Heinrich Fip, Michael Kruse  
 USt-IdNr.: DE117645258
 
-Registergericht: Osnabrück  
-Registernummer: HRB 249
+Registergericht: Amtsgerichts Oldenburg  
+Registernummer: HRB 224027
 
 Gestaltung, Programmierung:  
 [www.formatformat.de](http://www.formatformat.de)

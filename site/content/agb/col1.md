@@ -22,7 +22,7 @@
 
 ## 3. Lieferung, Lieferfristen, Abnahme und Verpackung
 
-3.1. Sofern nicht anderes vereinbart wird, erfolgt die Lieferung „ab Werk“ (EXW gemäß Incoterms®/unser Werk Osnabrück, Deutschland, Warenausgabe).
+3.1. Sofern nicht anderes vereinbart wird, erfolgt die Lieferung „ab Werk“ (EXW gemäß Incoterms®/unser Werk Damme, Deutschland, Warenausgabe).
 
 3.2. Bei Abholung der Ware übernimmt der Käufer bzw. in seinem Namen die von dem Käufer zur Beförderung bestimmte Person die betriebs- und beförderungssichere Ladungssicherung.
 
@@ -58,7 +58,7 @@
 
 ## 6. Mängelrüge, Mängelansprüche
 
-6.1. Ein Sachmangel der Ware liegt vor, wenn die Ware unter Berücksichtigung der Regelungen in 2.3 spürbar von der vereinbarten Ausführung, Menge, Beschaffenheit, Verwendungseignung oder, wenn nichts Anderes vereinbart ist, von der in Osnabrück üblichen Beschaffenheit und Verwendungseignung abweicht. Ein Rechtsmangel der Ware liegt vor, wenn die Ware zum Zeitpunkt des Gefahrüberganges nicht frei von in der Bundesrepublik Deutschland durchsetzbaren Rechten oder Ansprüchen Dritter ist. Weitergehende gesetzliche Ausschlüsse oder Einschränkungen unserer Verantwortlichkeit bleiben unberührt. Ist nicht ausdrücklich etwas anderes vereinbart, sind wir insbesondere nicht dafür verantwortlich, dass die Ware für eine andere als die übliche Verwendung geeignet ist oder darüber hinausgehende Erwartungen des Käufers erfüllt oder außerhalb der Bundesrepublik Deutschland frei von Rechten/Ansprüchen Dritter ist.
+6.1. Ein Sachmangel der Ware liegt vor, wenn die Ware unter Berücksichtigung der Regelungen in 2.3 spürbar von der vereinbarten Ausführung, Menge, Beschaffenheit, Verwendungseignung oder, wenn nichts Anderes vereinbart ist, von der in Damme üblichen Beschaffenheit und Verwendungseignung abweicht. Ein Rechtsmangel der Ware liegt vor, wenn die Ware zum Zeitpunkt des Gefahrüberganges nicht frei von in der Bundesrepublik Deutschland durchsetzbaren Rechten oder Ansprüchen Dritter ist. Weitergehende gesetzliche Ausschlüsse oder Einschränkungen unserer Verantwortlichkeit bleiben unberührt. Ist nicht ausdrücklich etwas anderes vereinbart, sind wir insbesondere nicht dafür verantwortlich, dass die Ware für eine andere als die übliche Verwendung geeignet ist oder darüber hinausgehende Erwartungen des Käufers erfüllt oder außerhalb der Bundesrepublik Deutschland frei von Rechten/Ansprüchen Dritter ist.
 
 6.2. Offensichtliche Mängel gleich welcher Art sind von Unternehmern unverzüglich nach Lieferung der Ware zu rügen. Nicht offensichtliche Mängel sind von Unternehmern unverzüglich nach deren Entdeckung, spätestens jedoch nach Ablauf eines Jahres ab Lieferung zu rügen. Mündliche oder fernmündliche Rügen bedürfen der schriftlichen Bestätigung. Bei nicht form- und/oder fristgerechter Rüge gilt die Ware als genehmigt.
 

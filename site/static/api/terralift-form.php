@@ -316,8 +316,8 @@ if ($hasKatalog || $hasReferenzen) {
 
     <p style="font-size: 12px; color: #6f7072;">
         <strong>Wöbking GmbH</strong><br>
-        Rheinstraße 36<br>
-        49090 Osnabrück/Hafen<br>
+        Robert-Bosch-Straße 20<br>
+        49401 Damme<br>
         Deutschland<br>
         <br>
         Telefon: +49 541 62867<br>
@@ -362,8 +362,8 @@ if ($hasBeratung) {
 
     <p style="font-size: 12px; color: #6f7072;">
         <strong>Wöbking GmbH</strong><br>
-        Rheinstraße 36<br>
-        49090 Osnabrück/Hafen<br>
+        Robert-Bosch-Straße 20<br>
+        49401 Damme<br>
         Deutschland<br>
         <br>
         Telefon: +49 541 62867<br>

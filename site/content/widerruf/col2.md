@@ -1,6 +1,6 @@
 ---
 downloads:
-- 230411-Wöbking-Widerrufsbelehrung.pdf
+- widerrufsbelehrung-2026.pdf
 ---
 Wir können die Rückzahlung verweigern, bis wir die Waren wieder zurückerhalten haben oder bis Sie den Nachweis erbracht haben, dass Sie die Waren zurückgesandt haben, je nachdem, welches der frühere Zeitpunkt ist.
 

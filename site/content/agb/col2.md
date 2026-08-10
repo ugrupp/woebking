@@ -1,6 +1,6 @@
 ---
 downloads:
-- 230411-Wöbking-Allgemeine-Geschäftsbedingungen.pdf
+- agb-woebking-2026.pdf
 ---
 
 ## 7. Sicherungsrechte
@@ -59,7 +59,7 @@ Bei allen Vorgängen der Datenverarbeitung (Verarbeitung, Erhebung, Übermittlun
 
 Verantwortliche Stelle für die Verarbeitung Ihrer personenbezogenen Daten ist:
 
-Wöbking GmbH, Rheinstraße. 36, 49090 Osnabrück, Telefon +49 (0)541 / 62867, Fax +49 (0)541 / 682460, E-Mail: info@woebking.com, Geschäftsführer: Jannpeter Heinrich Fip, Michael Kruse
+Wöbking GmbH, Robert-Bosch-Straße 20, 49401 Damme, Telefon +49 (0)541 / 62867, Fax +49 (0)541 / 682460, E-Mail: info@woebking.com, Geschäftsführer: Jannpeter Heinrich Fip, Michael Kruse
 
 Zur Bestellung eines Datenschutzbeauftragten sind wir nicht verpflichtet.
 

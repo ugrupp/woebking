@@ -13,7 +13,7 @@ Vom Widerruf sind ausgeschlossen:
 1. alle Artikel, die nach Abschluss der Bestellung individuell für den Kunden herstellt werden. Dies sind Artikel in 300 Liter, 600 Liter und 1.000 Liter IBC Containern sowie 200 Liter Fässern.
 2. alle Artikel, die nach Abschluss der Bestellung individuell für den Kunden, bestellt werden. Dies sind Artikel, die wir nachweislich auftragsspezifisch bei Herstellern zur Erfüllung Ihres Auftrages bestellen.
 
-Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (Wöbking GmbH, Rheinstraße 36, 49090 Osnabrück – info@woebking.com) mittels einer eindeutigen Erklärung entweder eines per Post versandten Briefes oder einer E-Mail über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren.
+Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (Wöbking GmbH, Robert-Bosch-Straße 20, 49401 Damme – info@woebking.com) mittels einer eindeutigen Erklärung entweder eines per Post versandten Briefes oder einer E-Mail über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren.
 
 Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.
 
